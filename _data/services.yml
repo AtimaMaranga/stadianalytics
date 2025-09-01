@@ -1,0 +1,73 @@
+# Services data for Stadi Research & Analytics
+
+- title: "Academic Research Support"
+  description: "Comprehensive research assistance for students and academic institutions including thesis support, literature reviews, and statistical analysis."
+  icon: "fas fa-graduation-cap"
+  url: "/services/academic-research"
+  features:
+    - "Thesis & Dissertation Guidance"
+    - "Literature Review & Research Design"
+    - "Statistical Analysis (SPSS, R, Python, Stata)"
+    - "Academic Writing & Formatting"
+    - "Research Methodology Training"
+  target_audience: "Students, Researchers, Academic Institutions"
+
+- title: "Corporate Research"
+  description: "Strategic research solutions for businesses, NGOs, and government agencies to support decision-making and growth initiatives."
+  icon: "fas fa-building"
+  url: "/services/corporate-research"
+  features:
+    - "Market Research & Analysis"
+    - "Competitive Intelligence"
+    - "Strategic Planning Support"
+    - "Policy Research"
+    - "Industry Analysis"
+  target_audience: "Businesses, NGOs, Government Agencies"
+
+- title: "Data Analytics"
+  description: "Advanced data analysis services using cutting-edge tools to transform raw data into actionable business insights."
+  icon: "fas fa-chart-bar"
+  url: "/services/data-analytics"
+  features:
+    - "Statistical Analysis & Modeling"
+    - "Data Visualization"
+    - "Predictive Analytics"
+    - "Business Intelligence"
+    - "Custom Dashboard Development"
+  target_audience: "Organizations, Research Institutions"
+
+- title: "Training & Capacity Building"
+  description: "Comprehensive training programs in research methods, data analysis, and statistical software for individuals and organizations."
+  icon: "fas fa-chalkboard-teacher"
+  url: "/services/training"
+  features:
+    - "Research Methodology Workshops"
+    - "Statistical Software Training"
+    - "Data Analysis Bootcamps"
+    - "Custom Training Programs"
+    - "Online & In-Person Sessions"
+  target_audience: "Students, Professionals, Organizations"
+
+- title: "Monitoring & Evaluation"
+  description: "Design and implementation of robust M&E frameworks to track project performance and measure impact effectively."
+  icon: "fas fa-tasks"
+  url: "/services/monitoring-evaluation"
+  features:
+    - "M&E Framework Development"
+    - "Theory of Change Design"
+    - "Impact Assessment"
+    - "Data Collection Systems"
+    - "Performance Monitoring"
+  target_audience: "NGOs, Development Organizations, Government"
+
+- title: "Market Research & Feasibility"
+  description: "Comprehensive market research and feasibility studies to support business expansion and investment decisions."
+  icon: "fas fa-search-dollar"
+  url: "/services/market-research"
+  features:
+    - "Market Size & Opportunity Analysis"
+    - "Feasibility Studies"
+    - "Consumer Behavior Research"
+    - "Investment Due Diligence"
+    - "Risk Assessment"
+  target_audience: "Businesses, Investors, Entrepreneurs"

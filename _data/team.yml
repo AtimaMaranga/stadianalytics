@@ -1,0 +1,61 @@
+# Team members data
+
+- name: "Dr. John Kamau"
+  position: "Lead Research Consultant"
+  bio: "PhD in Economics with 12+ years in research and policy analysis. Specializes in quantitative research methods and economic modeling."
+  icon: "fas fa-user-tie"
+  skills:
+    - "Economic Analysis"
+    - "Policy Research"
+    - "Statistical Modeling"
+    - "SPSS/Stata Expert"
+
+- name: "Mary Wanjiku"
+  position: "Senior Data Analyst"
+  bio: "Master's in Statistics with expertise in advanced analytics and machine learning. Passionate about transforming complex data into actionable insights."
+  icon: "fas fa-chart-line"
+  skills:
+    - "Python/R Programming"
+    - "Machine Learning"
+    - "Data Visualization"
+    - "Business Intelligence"
+
+- name: "Peter Otieno"
+  position: "Academic Research Specialist"
+  bio: "PhD candidate with extensive experience supporting graduate students. Expert in research methodology and academic writing standards."
+  icon: "fas fa-graduation-cap"
+  skills:
+    - "Research Design"
+    - "Academic Writing"
+    - "Literature Review"
+    - "Thesis Support"
+
+- name: "Grace Mutindi"
+  position: "M&E Framework Developer"
+  bio: "Development professional with 8+ years designing and implementing monitoring and evaluation systems for NGOs and government projects."
+  icon: "fas fa-tasks"
+  skills:
+    - "M&E Design"
+    - "Impact Assessment"
+    - "Theory of Change"
+    - "Data Collection"
+
+- name: "Ahmed Hassan"
+  position: "Market Research Analyst"
+  bio: "Business strategist with expertise in market analysis and feasibility studies. Helped launch 20+ successful ventures across East Africa."
+  icon: "fas fa-search-dollar"
+  skills:
+    - "Market Analysis"
+    - "Feasibility Studies"
+    - "Consumer Research"
+    - "Strategic Planning"
+
+- name: "Susan Nyokabi"
+  position: "Training Coordinator"
+  bio: "Education specialist focused on capacity building and knowledge transfer. Designed training programs for 500+ professionals."
+  icon: "fas fa-chalkboard-teacher"
+  skills:
+    - "Curriculum Design"
+    - "Workshop Facilitation"
+    - "Adult Learning"
+    - "Capacity Building"

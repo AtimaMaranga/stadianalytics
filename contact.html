@@ -1,0 +1,259 @@
+---
+layout: default
+title: "Contact Stadi Research & Analytics"
+description: "Get in touch with Stadi Research & Analytics for your research and analytics needs. Multiple ways to reach us across East Africa."
+---
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold mb-3">Contact Us</h1>
+                <p class="lead">Ready to start your research project? Get in touch today!</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="page-content">
+    <div class="container">
+        <div class="row g-5">
+            <!-- Contact Form -->
+            <div class="col-lg-8">
+                <div class="contact-form">
+                    <h2 class="fw-bold mb-4">Send us a Message</h2>
+                    <p class="text-muted mb-4">Fill out the form below and we'll get back to you within 24 hours.</p>
+                    
+                    <!-- Alert container -->
+                    <div id="alerts"></div>
+                    
+                    <form id="contactForm">
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="name" class="form-label">Full Name *</label>
+                                <input type="text" class="form-control" id="name" required>
+                            </div>
+                            <div class="col-md-6">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" class="form-control" id="email" required>
+                            </div>
+                        </div>
+                        
+                        <div class="row g-3 mb-4">
+                            <div class="col-md-6">
+                                <label for="phone" class="form-label">Phone Number</label>
+                                <input type="tel" class="form-control" id="phone">
+                            </div>
+                            <div class="col-md-6">
+                                <label for="organization" class="form-label">Organization/Institution</label>
+                                <input type="text" class="form-control" id="organization">
+                            </div>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="service" class="form-label">Service Needed</label>
+                            <select class="form-select" id="service">
+                                <option value="">Select a service...</option>
+                                <option value="academic-research">Academic Research Support</option>
+                                <option value="corporate-research">Corporate Research</option>
+                                <option value="data-analytics">Data Analytics</option>
+                                <option value="training">Training & Capacity Building</option>
+                                <option value="monitoring-evaluation">Monitoring & Evaluation</option>
+                                <option value="market-research">Market Research</option>
+                                <option value="consultation">General Consultation</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" class="form-control" id="subject" placeholder="Brief description of your project">
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="message" class="form-label">Project Details *</label>
+                            <textarea class="form-control" id="message" rows="6" placeholder="Please describe your research needs, timeline, and any specific requirements..." required></textarea>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="budget" class="form-label">Estimated Budget Range (Optional)</label>
+                            <select class="form-select" id="budget">
+                                <option value="">Select budget range...</option>
+                                <option value="under-50k">Under KES 50,000</option>
+                                <option value="50k-100k">KES 50,000 - 100,000</option>
+                                <option value="100k-250k">KES 100,000 - 250,000</option>
+                                <option value="250k-500k">KES 250,000 - 500,000</option>
+                                <option value="500k-1m">KES 500,000 - 1,000,000</option>
+                                <option value="over-1m">Over KES 1,000,000</option>
+                            </select>
+                        </div>
+                        
+                        <div class="mb-4">
+                            <label for="timeline" class="form-label">Project Timeline</label>
+                            <select class="form-select" id="timeline">
+                                <option value="">Select timeline...</option>
+                                <option value="urgent">Urgent (Within 1 week)</option>
+                                <option value="1-2weeks">1-2 weeks</option>
+                                <option value="1month">Within 1 month</option>
+                                <option value="2-3months">2-3 months</option>
+                                <option value="flexible">Flexible timeline</option>
+                            </select>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+            
+            <!-- Contact Information -->
+            <div class="col-lg-4">
+                <div class="contact-info bg-light rounded-4 p-4 mb-4">
+                    <h3 class="fw-bold mb-4">Get in Touch</h3>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-map-marker-alt fa-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Office Location</h6>
+                                <p class="text-muted mb-0">{{ site.company.address }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-envelope fa-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Email</h6>
+                                <p class="text-muted mb-0">
+                                    <a href="mailto:{{ site.company.email }}" class="text-decoration-none">{{ site.company.email }}</a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item mb-4">
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-phone fa-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Phone</h6>
+                                <p class="text-muted mb-0">{{ site.company.phone }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="contact-item">
+                        <div class="d-flex align-items-start">
+                            <div class="contact-icon me-3">
+                                <i class="fas fa-clock fa-lg text-primary"></i>
+                            </div>
+                            <div>
+                                <h6 class="fw-bold mb-1">Business Hours</h6>
+                                <p class="text-muted mb-0">
+                                    Monday - Friday: 8:00 AM - 6:00 PM<br>
+                                    Saturday: 9:00 AM - 2:00 PM<br>
+                                    Sunday: Closed
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Quick Contact Options -->
+                <div class="quick-contact bg-primary text-white rounded-4 p-4">
+                    <h4 class="fw-bold mb-3">Quick Contact</h4>
+                    <p class="mb-4">Need immediate assistance? Reach out through these channels:</p>
+                    
+                    <div class="quick-contact-buttons d-grid gap-2">
+                        <a href="https://wa.me/254XXXXXXXXX" class="btn btn-success" target="_blank">
+                            <i class="fab fa-whatsapp me-2"></i>WhatsApp Chat
+                        </a>
+                        <a href="tel:{{ site.company.phone }}" class="btn btn-outline-light">
+                            <i class="fas fa-phone me-2"></i>Call Now
+                        </a>
+                        <a href="mailto:{{ site.company.email }}" class="btn btn-outline-light">
+                            <i class="fas fa-envelope me-2"></i>Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ Section -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">Frequently Asked Questions</h2>
+                <p class="lead text-muted">Quick answers to common questions</p>
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <div class="accordion" id="faqAccordion">
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#faq1">
+                                How quickly can you start my project?
+                            </button>
+                        </h2>
+                        <div id="faq1" class="accordion-collapse collapse show" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Most projects can begin within 48 hours of agreement. Urgent projects may start the same day, depending on availability and complexity.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq2">
+                                What are your payment terms?
+                            </button>
+                        </h2>
+                        <div id="faq2" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We typically require 50% upfront payment and 50% upon completion. For longer projects, we can arrange milestone-based payments.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq3">
+                                Do you work with international clients?
+                            </button>
+                        </h2>
+                        <div id="faq3" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                Yes! We work with clients globally, especially those with interests in East African markets. All consultations can be conducted remotely.
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <h2 class="accordion-header">
+                            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#faq4">
+                                What software do you use for analysis?
+                            </button>
+                        </h2>
+                        <div id="faq4" class="accordion-collapse collapse" data-bs-parent="#faqAccordion">
+                            <div class="accordion-body">
+                                We use industry-standard tools including SPSS, R, Python, Stata, and Excel for analysis, plus specialized software based on project requirements.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

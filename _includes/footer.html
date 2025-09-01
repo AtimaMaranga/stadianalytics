@@ -1,0 +1,72 @@
+<footer class="bg-dark text-light py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <h5 class="fw-bold mb-3">
+                    <i class="fas fa-chart-line text-primary me-2"></i>
+                    {{ site.title }}
+                </h5>
+                <p class="text-muted">{{ site.description }}</p>
+                <div class="social-links mt-3">
+                    {% if site.social.linkedin %}
+                    <a href="{{ site.social.linkedin }}" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
+                    {% endif %}
+                    {% if site.social.twitter %}
+                    <a href="{{ site.social.twitter }}" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
+                    {% endif %}
+                    {% if site.social.facebook %}
+                    <a href="{{ site.social.facebook }}" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
+                    {% endif %}
+                </div>
+            </div>
+            
+            <div class="col-lg-2 col-md-4">
+                <h6 class="fw-bold mb-3">Services</h6>
+                <ul class="list-unstyled">
+                    <li><a href="{{ '/services/academic-research' | relative_url }}" class="text-muted text-decoration-none">Academic Research</a></li>
+                    <li><a href="{{ '/services/corporate-research' | relative_url }}" class="text-muted text-decoration-none">Corporate Research</a></li>
+                    <li><a href="{{ '/services/data-analytics' | relative_url }}" class="text-muted text-decoration-none">Data Analytics</a></li>
+                    <li><a href="{{ '/services/training' | relative_url }}" class="text-muted text-decoration-none">Training</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-2 col-md-4">
+                <h6 class="fw-bold mb-3">Company</h6>
+                <ul class="list-unstyled">
+                    <li><a href="{{ '/about' | relative_url }}" class="text-muted text-decoration-none">About Us</a></li>
+                    <li><a href="{{ '/portfolio' | relative_url }}" class="text-muted text-decoration-none">Portfolio</a></li>
+                    <li><a href="{{ '/contact' | relative_url }}" class="text-muted text-decoration-none">Contact</a></li>
+                </ul>
+            </div>
+            
+            <div class="col-lg-4 col-md-4">
+                <h6 class="fw-bold mb-3">Contact Info</h6>
+                <div class="contact-info">
+                    <p class="text-muted mb-2">
+                        <i class="fas fa-map-marker-alt me-2"></i>
+                        {{ site.company.address }}
+                    </p>
+                    <p class="text-muted mb-2">
+                        <i class="fas fa-envelope me-2"></i>
+                        <a href="mailto:{{ site.company.email }}" class="text-muted text-decoration-none">{{ site.company.email }}</a>
+                    </p>
+                    <p class="text-muted mb-2">
+                        <i class="fas fa-phone me-2"></i>
+                        {{ site.company.phone }}
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <hr class="my-4">
+        
+        <div class="row align-items-center">
+            <div class="col-md-6">
+                <p class="text-muted mb-0">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+            </div>
+            <div class="col-md-6 text-md-end">
+                <p class="text-muted mb-0">Built with <i class="fas fa-heart text-danger"></i> in {{ site.company.location }}</p>
+            </div>
+        </div>
+    </div>
+</footer>

@@ -1,0 +1,49 @@
+# Testimonials for Stadi Research & Analytics
+
+- name: "Dr. Sarah Kimani"
+  position: "PhD Student, University of Nairobi"
+  content: "Stadi Research provided exceptional support for my dissertation. Their statistical analysis expertise and guidance through complex data interpretation was invaluable. Highly professional and reliable."
+  rating: 5
+  category: "academic"
+
+- name: "James Mwangi"
+  position: "Executive Director, Green Future NGO"
+  content: "The M&E framework developed by Stadi Research transformed our project monitoring capabilities. Their team understood our needs perfectly and delivered a comprehensive solution on time."
+  rating: 5
+  category: "corporate"
+
+- name: "Fatuma Hassan"
+  position: "Master's Student, Strathmore University"
+  content: "The research methodology training I received was outstanding. The trainers were knowledgeable and patient, helping me understand complex statistical concepts with practical examples."
+  rating: 5
+  category: "training"
+
+- name: "Michael Chen"
+  position: "Operations Manager, TechStart Kenya"
+  content: "Stadi Research conducted our market feasibility study with incredible attention to detail. Their insights directly influenced our expansion strategy and saved us from costly mistakes."
+  rating: 5
+  category: "market-research"
+
+- name: "Prof. Agnes Mutua"
+  position: "Head of Research, Kenyatta University"
+  content: "We've partnered with Stadi Research on multiple projects. Their commitment to academic excellence and rigorous methodology makes them our preferred research partner."
+  rating: 5
+  category: "academic"
+
+- name: "David Ochieng"
+  position: "Policy Analyst, Ministry of Health"
+  content: "The policy research report delivered by Stadi Research was comprehensive and well-structured. It provided clear recommendations that were immediately actionable for our department."
+  rating: 5
+  category: "government"
+
+- name: "Amina Said"
+  position: "MBA Student, USIU-Africa"
+  content: "The data analysis support for my capstone project was exceptional. They not only performed the analysis but also taught me how to interpret and present the results effectively."
+  rating: 5
+  category: "academic"
+
+- name: "Robert Kiprotich"
+  position: "Founder, AgriTech Solutions"
+  content: "Stadi Research's market analysis helped us understand the agricultural technology landscape in East Africa. Their insights were crucial for securing our Series A funding."
+  rating: 5
+  category: "startup"

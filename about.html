@@ -1,0 +1,189 @@
+---
+layout: default
+title: "About Stadi Research & Analytics"
+description: "Learn about our mission, vision, values, and the expert team behind Stadi Research & Analytics Ltd."
+---
+
+<!-- Page Header -->
+<section class="page-header">
+    <div class="container">
+        <div class="row">
+            <div class="col-12 text-center">
+                <h1 class="display-4 fw-bold mb-3">About Stadi Research</h1>
+                <p class="lead">Transforming research and analytics across East Africa</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Company Story -->
+<section class="page-content">
+    <div class="container">
+        <div class="row align-items-center mb-5">
+            <div class="col-lg-6">
+                <h2 class="fw-bold mb-4">Our Story</h2>
+                <p class="lead mb-4">
+                    Stadi Research & Analytics Ltd was founded with a simple yet powerful mission: to bridge the gap between data and decisions across East Africa's academic and business communities.
+                </p>
+                <p class="mb-4">
+                    Based in Nairobi, Kenya, we have grown from a small consultancy to a trusted partner for over 50 organizations and hundreds of students. Our dual focus on academic excellence and corporate intelligence sets us apart in the research consulting landscape.
+                </p>
+                <p class="mb-4">
+                    We believe that quality research should be accessible to everyone – from the master's student working on their thesis to the multinational corporation planning their East African expansion strategy.
+                </p>
+            </div>
+            <div class="col-lg-6">
+                <div class="text-center">
+                    <i class="fas fa-building fa-10x text-primary opacity-75"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Mission, Vision, Values -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="text-center p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-bullseye fa-3x text-primary"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Our Mission</h3>
+                    <p class="text-muted">
+                        To empower individuals and organizations with high-quality research and analytics services that drive informed decision-making and sustainable growth across East Africa.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="text-center p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-eye fa-3x text-success"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Our Vision</h3>
+                    <p class="text-muted">
+                        To be East Africa's leading research and analytics consultancy, recognized for excellence, innovation, and positive impact on academic and business communities.
+                    </p>
+                </div>
+            </div>
+            
+            <div class="col-lg-4">
+                <div class="text-center p-4">
+                    <div class="mb-3">
+                        <i class="fas fa-heart fa-3x text-danger"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Our Values</h3>
+                    <ul class="list-unstyled text-muted">
+                        <li class="mb-2">✓ Integrity in all interactions</li>
+                        <li class="mb-2">✓ Excellence in service delivery</li>
+                        <li class="mb-2">✓ Innovation in methodologies</li>
+                        <li class="mb-2">✓ Collaboration with clients</li>
+                        <li class="mb-2">✓ Accessibility for all</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">Our Expert Team</h2>
+                <p class="lead text-muted">Experienced professionals dedicated to your success</p>
+            </div>
+        </div>
+        
+        <div class="team-grid">
+            {% for member in site.data.team %}
+            <div class="team-card">
+                <div class="team-avatar">
+                    <i class="{{ member.icon | default: 'fas fa-user' }}"></i>
+                </div>
+                <h5 class="fw-bold mb-2">{{ member.name }}</h5>
+                <p class="text-primary mb-3">{{ member.position }}</p>
+                <p class="text-muted mb-3">{{ member.bio }}</p>
+                <div class="team-skills">
+                    {% for skill in member.skills %}
+                    <span class="badge bg-light text-dark me-1 mb-1">{{ skill }}</span>
+                    {% endfor %}
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Why Choose Us -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">Why Choose Stadi Research?</h2>
+                <p class="lead text-muted">What sets us apart in the research consulting landscape</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center p-3">
+                    <div class="mb-3">
+                        <i class="fas fa-medal fa-3x text-warning"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3">Proven Excellence</h5>
+                    <p class="text-muted">Over 500 successful projects with 98% client satisfaction rate</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center p-3">
+                    <div class="mb-3">
+                        <i class="fas fa-users fa-3x text-info"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3">Expert Team</h5>
+                    <p class="text-muted">PhD-qualified researchers and certified data analysts</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center p-3">
+                    <div class="mb-3">
+                        <i class="fas fa-map-marked-alt fa-3x text-success"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3">Local Expertise</h5>
+                    <p class="text-muted">Deep understanding of East African markets and culture</p>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6">
+                <div class="text-center p-3">
+                    <div class="mb-3">
+                        <i class="fas fa-handshake fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3">Partnership Approach</h5>
+                    <p class="text-muted">Collaborative relationship focused on your long-term success</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="bg-primary text-white py-5">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-4">Ready to Work with Us?</h2>
+                <p class="lead mb-4">Join hundreds of satisfied clients who trust Stadi Research for their most important projects.</p>
+                <div class="cta-buttons">
+                    <a href="{{ '/contact' | relative_url }}" class="btn btn-light btn-lg me-3">Get in Touch</a>
+                    <a href="{{ '/services' | relative_url }}" class="btn btn-outline-light btn-lg">View Services</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>

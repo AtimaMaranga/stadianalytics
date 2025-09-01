@@ -1,0 +1,31 @@
+# Homepage content data - easily editable
+
+hero:
+  title: "Transform Data Into Insights That Drive Success"
+  subtitle: "Professional research and analytics consulting services for students, academic institutions, businesses, and organizations across East Africa."
+  primary_button_text: "Explore Services"
+  secondary_button_text: "Get Started"
+
+trust_indicators:
+  projects_completed: "500+"
+  client_satisfaction: "98%"
+  organizations_served: "50+"
+
+value_propositions:
+  - title: "Expert Team"
+    description: "Experienced researchers and data analysts with advanced degrees and industry expertise"
+    icon: "fas fa-users"
+  
+  - title: "Proven Methods"
+    description: "Research methodologies and analytical frameworks tested across hundreds of successful projects"
+    icon: "fas fa-check-circle"
+  
+  - title: "Timely Delivery"
+    description: "Committed to meeting deadlines without compromising on quality or accuracy"
+    icon: "fas fa-clock"
+
+call_to_action:
+  title: "Ready to Get Started?"
+  subtitle: "Let's discuss your research needs and create a customized solution for your project."
+  primary_button: "Start Your Project"
+  secondary_button: "Schedule Consultation"
