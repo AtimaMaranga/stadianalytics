@@ -1,0 +1,232 @@
+---
+layout: default
+title: "Professional Research & Analytics Services in East Africa"
+description: "Expert research and analytics consulting for students, academic institutions, businesses, and organizations across East Africa."
+---
+
+<!-- Hero Section -->
+<section class="hero-section bg-gradient-primary text-white">
+    <div class="container">
+        <div class="row align-items-center min-vh-100 py-5">
+            <div class="col-lg-6">
+                <div class="hero-content">
+                    <h1 class="display-4 fw-bold mb-4 animate-fade-in">
+                        {{ site.data.homepage.hero.title | default: "Transform Data Into Insights That Drive Success" }}
+                    </h1>
+                    <p class="lead mb-4 animate-fade-in-delay">
+                        {{ site.data.homepage.hero.subtitle | default: "Professional research and analytics consulting services for students, academic institutions, businesses, and organizations across East Africa." }}
+                    </p>
+                    <div class="hero-buttons animate-fade-in-delay-2">
+                        <a href="#services" class="btn btn-light btn-lg me-3">Explore Services</a>
+                        <a href="{{ '/contact' | relative_url }}" class="btn btn-outline-light btn-lg">Get Started</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <div class="hero-image text-center">
+                    <div class="chart-animation">
+                        <i class="fas fa-chart-line fa-10x text-white opacity-75"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Trust Indicators -->
+<section class="trust-section bg-white py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4 mb-4">
+                <div class="trust-item">
+                    <h2 class="display-6 fw-bold text-primary mb-2">500+</h2>
+                    <p class="text-muted">Projects Completed</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="trust-item">
+                    <h2 class="display-6 fw-bold text-primary mb-2">98%</h2>
+                    <p class="text-muted">Client Satisfaction</p>
+                </div>
+            </div>
+            <div class="col-md-4 mb-4">
+                <div class="trust-item">
+                    <h2 class="display-6 fw-bold text-primary mb-2">50+</h2>
+                    <p class="text-muted">Organizations Served</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Dual Pathways -->
+<section class="pathways-section py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">Choose Your Path</h2>
+                <p class="lead text-muted">Tailored solutions for different needs</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-6">
+                <div class="pathway-card bg-white shadow-lg rounded-4 p-5 h-100 text-center">
+                    <div class="pathway-icon mb-4">
+                        <i class="fas fa-graduation-cap fa-4x text-primary"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Students & Academics</h3>
+                    <p class="text-muted mb-4">Research support, thesis guidance, statistical analysis, and academic writing assistance.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Thesis & Dissertation Support</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Statistical Analysis (SPSS, R, Python)</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Literature Review</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Academic Writing</li>
+                    </ul>
+                    <a href="{{ '/services/academic-research' | relative_url }}" class="btn btn-primary btn-lg">Learn More</a>
+                </div>
+            </div>
+            
+            <div class="col-lg-6">
+                <div class="pathway-card bg-white shadow-lg rounded-4 p-5 h-100 text-center">
+                    <div class="pathway-icon mb-4">
+                        <i class="fas fa-building fa-4x text-success"></i>
+                    </div>
+                    <h3 class="fw-bold mb-3">Organizations</h3>
+                    <p class="text-muted mb-4">Corporate research, market analysis, M&E frameworks, and strategic consulting.</p>
+                    <ul class="list-unstyled mb-4">
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Market Research & Analysis</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>M&E Framework Development</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Strategic Consulting</li>
+                        <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Capacity Building</li>
+                    </ul>
+                    <a href="{{ '/services/corporate-research' | relative_url }}" class="btn btn-success btn-lg">Learn More</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Services Overview -->
+<section id="services" class="services-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">Our Core Services</h2>
+                <p class="lead text-muted">Comprehensive research and analytics solutions</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% for service in site.data.services %}
+            <div class="col-lg-4 col-md-6">
+                <div class="service-card bg-white shadow rounded-4 p-4 h-100">
+                    <div class="service-icon mb-3">
+                        <i class="{{ service.icon }} fa-3x text-primary"></i>
+                    </div>
+                    <h5 class="fw-bold mb-3">{{ service.title }}</h5>
+                    <p class="text-muted mb-3">{{ service.description }}</p>
+                    <a href="{{ service.url | relative_url }}" class="btn btn-outline-primary">Learn More</a>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Process Section -->
+<section class="process-section py-5 bg-light">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">Our 5-Step Process</h2>
+                <p class="lead text-muted">How we deliver excellence in every project</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mx-auto mb-3">1</div>
+                    <h6 class="fw-bold">Consultation</h6>
+                    <p class="small text-muted">Understand your needs</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mx-auto mb-3">2</div>
+                    <h6 class="fw-bold">Planning</h6>
+                    <p class="small text-muted">Develop methodology</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mx-auto mb-3">3</div>
+                    <h6 class="fw-bold">Research</h6>
+                    <p class="small text-muted">Collect & analyze data</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mx-auto mb-3">4</div>
+                    <h6 class="fw-bold">Insights</h6>
+                    <p class="small text-muted">Generate findings</p>
+                </div>
+            </div>
+            <div class="col-lg-2 col-md-4 col-6">
+                <div class="process-step text-center">
+                    <div class="step-number bg-primary text-white rounded-circle mx-auto mb-3">5</div>
+                    <h6 class="fw-bold">Delivery</h6>
+                    <p class="small text-muted">Present results</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section class="testimonials-section py-5">
+    <div class="container">
+        <div class="row text-center mb-5">
+            <div class="col-12">
+                <h2 class="display-5 fw-bold mb-3">What Clients Say</h2>
+                <p class="lead text-muted">Trusted by students and organizations across East Africa</p>
+            </div>
+        </div>
+        
+        <div class="row g-4">
+            {% for testimonial in site.data.testimonials limit:3 %}
+            <div class="col-lg-4">
+                <div class="testimonial-card bg-white shadow rounded-4 p-4">
+                    <div class="stars mb-3">
+                        {% for i in (1..5) %}
+                        <i class="fas fa-star text-warning"></i>
+                        {% endfor %}
+                    </div>
+                    <p class="mb-4">"{{ testimonial.content }}"</p>
+                    <div class="testimonial-author">
+                        <h6 class="fw-bold mb-1">{{ testimonial.name }}</h6>
+                        <small class="text-muted">{{ testimonial.position }}</small>
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="cta-section bg-primary text-white py-5">
+    <div class="container text-center">
+        <div class="row">
+            <div class="col-lg-8 mx-auto">
+                <h2 class="display-5 fw-bold mb-4">Ready to Get Started?</h2>
+                <p class="lead mb-4">Let's discuss your research needs and create a customized solution for your project.</p>
+                <div class="cta-buttons">
+                    <a href="{{ '/contact' | relative_url }}" class="btn btn-light btn-lg me-3">Start Your Project</a>
+                    <a href="#" class="btn btn-outline-light btn-lg">Schedule Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
