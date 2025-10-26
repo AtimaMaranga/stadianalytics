@@ -1,7 +1,121 @@
 // Main JavaScript for Stadi Research Website
 
 $(document).ready(function() {
-    
+
+    // Hero Slider Functionality
+    let currentSlide = 1;
+    const totalSlides = 4;
+    let autoSlideInterval;
+    const slideDelay = 5000; // 5 seconds between slides
+
+    function goToSlide(slideNumber) {
+        // Remove active class from all slides and dots
+        $('.hero-slide').removeClass('active');
+        $('.hero-dot').removeClass('active');
+
+        // Add active class to current slide and dot
+        $(`.hero-slide[data-slide="${slideNumber}"]`).addClass('active');
+        $(`.hero-dot[data-slide="${slideNumber}"]`).addClass('active');
+
+        currentSlide = slideNumber;
+    }
+
+    function nextSlide() {
+        let next = currentSlide + 1;
+        if (next > totalSlides) {
+            next = 1;
+        }
+        goToSlide(next);
+    }
+
+    function prevSlide() {
+        let prev = currentSlide - 1;
+        if (prev < 1) {
+            prev = totalSlides;
+        }
+        goToSlide(prev);
+    }
+
+    function startAutoSlide() {
+        autoSlideInterval = setInterval(nextSlide, slideDelay);
+    }
+
+    function stopAutoSlide() {
+        clearInterval(autoSlideInterval);
+    }
+
+    function resetAutoSlide() {
+        stopAutoSlide();
+        startAutoSlide();
+    }
+
+    // Navigation arrow click handlers
+    $('.hero-nav-next').on('click', function() {
+        nextSlide();
+        resetAutoSlide();
+    });
+
+    $('.hero-nav-prev').on('click', function() {
+        prevSlide();
+        resetAutoSlide();
+    });
+
+    // Dot navigation click handler
+    $('.hero-dot').on('click', function() {
+        const slideNumber = parseInt($(this).attr('data-slide'));
+        goToSlide(slideNumber);
+        resetAutoSlide();
+    });
+
+    // Pause on hover
+    $('.hero-slider-container').on('mouseenter', function() {
+        stopAutoSlide();
+    }).on('mouseleave', function() {
+        startAutoSlide();
+    });
+
+    // Keyboard navigation
+    $(document).on('keydown', function(e) {
+        if ($('.hero-slider').length) {
+            if (e.key === 'ArrowRight') {
+                nextSlide();
+                resetAutoSlide();
+            } else if (e.key === 'ArrowLeft') {
+                prevSlide();
+                resetAutoSlide();
+            }
+        }
+    });
+
+    // Touch/swipe support for mobile
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    $('.hero-slider-container').on('touchstart', function(e) {
+        touchStartX = e.changedTouches[0].screenX;
+    });
+
+    $('.hero-slider-container').on('touchend', function(e) {
+        touchEndX = e.changedTouches[0].screenX;
+        handleSwipe();
+    });
+
+    function handleSwipe() {
+        if (touchEndX < touchStartX - 50) {
+            // Swiped left
+            nextSlide();
+            resetAutoSlide();
+        }
+        if (touchEndX > touchStartX + 50) {
+            // Swiped right
+            prevSlide();
+            resetAutoSlide();
+        }
+    }
+
+    // Start the auto-slide on page load
+    startAutoSlide();
+
     // Smooth scrolling for anchor links
     $('a[href^="#"]').on('click', function(event) {
         var target = $(this.getAttribute('href'));
