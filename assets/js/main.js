@@ -334,3 +334,300 @@ if ('IntersectionObserver' in window) {
         observer.observe(el);
     });
 }
+// ==== MODERN NAVIGATION & FOOTER ENHANCEMENTS ====
+
+$(document).ready(function() {
+    
+    // Scroll Progress Bar
+    function updateScrollProgress() {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        $('.scroll-progress-bar').css('width', scrolled + '%');
+    }
+    
+    $(window).on('scroll', updateScrollProgress);
+    
+    // Enhanced Navbar Scroll Effect
+    function handleNavbarScroll() {
+        const scrollTop = $(window).scrollTop();
+        
+        if (scrollTop > 100) {
+            $('#mainNav').addClass('scrolled');
+        } else {
+            $('#mainNav').removeClass('scrolled');
+        }
+    }
+    
+    $(window).on('scroll', handleNavbarScroll);
+    
+    // Enhanced Back to Top Button
+    function handleBackToTopButton() {
+        const scrollTop = $(window).scrollTop();
+        
+        if (scrollTop > 500) {
+            $('.back-to-top').addClass('show');
+        } else {
+            $('.back-to-top').removeClass('show');
+        }
+    }
+    
+    $(window).on('scroll', handleBackToTopButton);
+    
+    $('.back-to-top').on('click', function(e) {
+        e.preventDefault();
+        $('html, body').animate({ scrollTop: 0 }, 800, 'swing');
+    });
+    
+    // Newsletter Form Handler
+    $('.newsletter-form').on('submit', function(e) {
+        e.preventDefault();
+        
+        const email = $(this).find('input[type="email"]').val();
+        const $button = $(this).find('button[type="submit"]');
+        const originalHtml = $button.html();
+        
+        // Basic email validation
+        if (!validateEmail(email)) {
+            showNotification('Please enter a valid email address', 'error');
+            return;
+        }
+        
+        // Show loading state
+        $button.html('<i class="bi bi-hourglass-split me-2"></i>Subscribing...').prop('disabled', true);
+        
+        // Simulate API call (replace with actual endpoint)
+        setTimeout(function() {
+            $button.html(originalHtml).prop('disabled', false);
+            showNotification('Thank you for subscribing! Check your inbox for confirmation.', 'success');
+            $('.newsletter-form')[0].reset();
+        }, 1500);
+    });
+    
+    // Notification System
+    function showNotification(message, type) {
+        const bgColor = type === 'success' ? 'linear-gradient(135deg, #10b981 0%, #059669 100%)' : 
+                        type === 'error' ? 'linear-gradient(135deg, #ef4444 0%, #dc2626 100%)' :
+                        'linear-gradient(135deg, #8021A0 0%, #0017F5 100%)';
+        
+        const notification = $(`
+            <div class="custom-notification" style="
+                position: fixed;
+                top: 100px;
+                right: 30px;
+                background: ${bgColor};
+                color: white;
+                padding: 1.25rem 1.5rem;
+                border-radius: 15px;
+                box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+                z-index: 10000;
+                max-width: 400px;
+                animation: slideInRight 0.3s ease;
+                display: flex;
+                align-items: center;
+                gap: 1rem;
+            ">
+                <i class="bi ${type === 'success' ? 'bi-check-circle' : type === 'error' ? 'bi-x-circle' : 'bi-info-circle'}" style="font-size: 1.5rem;"></i>
+                <span>${message}</span>
+            </div>
+        `);
+        
+        $('body').append(notification);
+        
+        setTimeout(function() {
+            notification.fadeOut(300, function() {
+                $(this).remove();
+            });
+        }, 4000);
+    }
+    
+    // Smooth Dropdown Animation
+    $('.dropdown-menu-modern').on('show.bs.dropdown', function() {
+        $(this).css({
+            'opacity': '0',
+            'transform': 'translateY(-10px)'
+        });
+        $(this).animate({
+            opacity: 1
+        }, 200);
+        $(this).css('transform', 'translateY(0)');
+    });
+    
+    // Parallax Effect for Hero Section
+    $(window).on('scroll', function() {
+        const scrolled = $(window).scrollTop();
+        $('.hero-slide-bg').css('transform', 'translateY(' + (scrolled * 0.5) + 'px)');
+    });
+    
+    // Lazy Loading for Images
+    if ('IntersectionObserver' in window) {
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.add('loaded');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        document.querySelectorAll('img[data-src]').forEach(img => {
+            imageObserver.observe(img);
+        });
+    }
+    
+    // Service Cards Tilt Effect (subtle 3D effect on hover)
+    $('.service-item, .training-card, .case-study-card').on('mousemove', function(e) {
+        const card = $(this);
+        const rect = this.getBoundingClientRect();
+        const x = e.clientX - rect.left;
+        const y = e.clientY - rect.top;
+        
+        const centerX = rect.width / 2;
+        const centerY = rect.height / 2;
+        
+        const rotateX = (y - centerY) / 20;
+        const rotateY = (centerX - x) / 20;
+        
+        card.css({
+            'transform': `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) scale(1.02)`
+        });
+    });
+    
+    $('.service-item, .training-card, .case-study-card').on('mouseleave', function() {
+        $(this).css({
+            'transform': 'perspective(1000px) rotateX(0) rotateY(0) scale(1)'
+        });
+    });
+    
+    // Typing Effect for Hero Titles (if desired)
+    function typeWriter(element, text, speed = 50) {
+        let i = 0;
+        element.innerHTML = '';
+        
+        function type() {
+            if (i < text.length) {
+                element.innerHTML += text.charAt(i);
+                i++;
+                setTimeout(type, speed);
+            }
+        }
+        
+        type();
+    }
+    
+    // Count-up Animation for Statistics
+    function animateValue(element, start, end, duration) {
+        let startTimestamp = null;
+        const step = (timestamp) => {
+            if (!startTimestamp) startTimestamp = timestamp;
+            const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+            const value = Math.floor(progress * (end - start) + start);
+            element.textContent = value + (element.dataset.suffix || '');
+            if (progress < 1) {
+                window.requestAnimationFrame(step);
+            }
+        };
+        window.requestAnimationFrame(step);
+    }
+    
+    // Trigger count animation when stats come into view
+    if ('IntersectionObserver' in window) {
+        const statsObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting && !entry.target.classList.contains('counted')) {
+                    entry.target.classList.add('counted');
+                    const target = parseInt(entry.target.dataset.count || entry.target.textContent);
+                    animateValue(entry.target, 0, target, 2000);
+                }
+            });
+        }, { threshold: 0.5 });
+        
+        document.querySelectorAll('.stat-number, .footer-stat-item .stat-number').forEach(stat => {
+            statsObserver.observe(stat);
+        });
+    }
+    
+    // Prevent default form submission for newsletter
+    $('form').on('submit', function(e) {
+        if ($(this).hasClass('newsletter-form')) {
+            return; // Already handled above
+        }
+    });
+    
+    // Enhanced Smooth Scroll with offset for fixed navbar
+    $('a[href^="#"]').not('[href="#"]').not('[href="#0"]').on('click', function(event) {
+        if (this.hash !== '') {
+            event.preventDefault();
+            
+            const hash = this.hash;
+            const target = $(hash);
+            
+            if (target.length) {
+                $('html, body').animate({
+                    scrollTop: target.offset().top - 100
+                }, 800, function() {
+                    if (history.pushState) {
+                        history.pushState(null, null, hash);
+                    }
+                });
+            }
+        }
+    });
+    
+    // Mobile Menu Enhancements
+    $('.navbar-toggler').on('click', function() {
+        $(this).toggleClass('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    $('.navbar-nav .nav-link').on('click', function() {
+        if ($(window).width() < 992) {
+            $('.navbar-collapse').collapse('hide');
+            $('.navbar-toggler').removeClass('active');
+        }
+    });
+    
+    // Add active class to current page nav link
+    const currentPage = window.location.pathname.split('/').pop() || 'index.html';
+    $('.navbar-nav .nav-link').each(function() {
+        const href = $(this).attr('href');
+        if (href && href.includes(currentPage)) {
+            $(this).addClass('active');
+        }
+    });
+    
+});
+
+// Add CSS animation keyframes dynamically
+const style = document.createElement('style');
+style.textContent = `
+    @keyframes slideInRight {
+        from {
+            opacity: 0;
+            transform: translateX(100px);
+        }
+        to {
+            opacity: 1;
+            transform: translateX(0);
+        }
+    }
+    
+    @keyframes fadeInUp {
+        from {
+            opacity: 0;
+            transform: translateY(30px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+    
+    .custom-notification {
+        animation: slideInRight 0.3s ease;
+    }
+`;
+document.head.appendChild(style);
+
