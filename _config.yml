@@ -5,8 +5,8 @@ description: >-
   Professional research and analytics consulting services in East Africa. 
   Academic support, corporate research, data analytics, and capacity building 
   for students, institutions, businesses, and organizations.
-baseurl: "" # the subpath of your site, e.g. /blog
-url: "https://stadiresearch.github.io" # your GitHub Pages URL
+baseurl: "/stadianalytics" # the subpath of your site, e.g. /blog
+url: "https://atimamaranga.github.io" # your GitHub Pages URL
 
 # Build settings
 markdown: kramdown
