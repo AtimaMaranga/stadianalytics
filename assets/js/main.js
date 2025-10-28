@@ -631,3 +631,303 @@ style.textContent = `
 `;
 document.head.appendChild(style);
 
+// ========================================
+// CONTACT PAGE SPECIFIC JAVASCRIPT
+// ========================================
+
+$(document).ready(function() {
+    // Contact Form Handling
+    $('#contactForm').on('submit', function(e) {
+        e.preventDefault();
+
+        // Get form values
+        const formData = {
+            fullName: $('#fullName').val(),
+            email: $('#email').val(),
+            phone: $('#phone').val(),
+            organization: $('#organization').val(),
+            service: $('#service').val(),
+            subject: $('#subject').val(),
+            message: $('#message').val(),
+            budget: $('#budget').val(),
+            timeline: $('#timeline').val(),
+            newsletter: $('#newsletter').is(':checked')
+        };
+
+        // Basic validation
+        if (!formData.fullName || !formData.email || !formData.message || !formData.service || !formData.timeline) {
+            showContactAlert('Please fill in all required fields.', 'danger');
+            return;
+        }
+
+        // Email validation
+        const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+        if (!emailRegex.test(formData.email)) {
+            showContactAlert('Please enter a valid email address.', 'danger');
+            return;
+        }
+
+        // Show loading state
+        const submitBtn = $(this).find('button[type="submit"]');
+        const originalBtnText = submitBtn.html();
+        submitBtn.prop('disabled', true).html('<i class="bi bi-hourglass-split me-2"></i>Sending...');
+
+        // Simulate form submission (replace with actual AJAX call to your backend)
+        setTimeout(function() {
+            // Success
+            showContactAlert(
+                'Thank you for reaching out! We\'ve received your message and will respond within 24 hours.',
+                'success'
+            );
+
+            // Reset form
+            $('#contactForm')[0].reset();
+
+            // Reset button
+            submitBtn.prop('disabled', false).html(originalBtnText);
+
+            // Show additional success message
+            showNotification('Message sent successfully!', 'success');
+
+        }, 2000);
+
+        // In production, replace the setTimeout with actual AJAX call:
+        /*
+        $.ajax({
+            url: '/api/contact',
+            method: 'POST',
+            data: formData,
+            success: function(response) {
+                showContactAlert(
+                    'Thank you for reaching out! We\'ve received your message and will respond within 24 hours.',
+                    'success'
+                );
+                $('#contactForm')[0].reset();
+                submitBtn.prop('disabled', false).html(originalBtnText);
+            },
+            error: function() {
+                showContactAlert('Sorry, there was an error sending your message. Please try again or contact us directly.', 'danger');
+                submitBtn.prop('disabled', false).html(originalBtnText);
+            }
+        });
+        */
+    });
+
+    // Show alert in contact form
+    function showContactAlert(message, type) {
+        const alertHTML = `
+            <div class="alert alert-${type} alert-dismissible fade show" role="alert">
+                <i class="bi bi-${type === 'success' ? 'check-circle-fill' : 'exclamation-triangle-fill'} me-2"></i>
+                ${message}
+                <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+            </div>
+        `;
+        $('#contactFormAlerts').html(alertHTML);
+
+        // Scroll to alert
+        $('html, body').animate({
+            scrollTop: $('#contactFormAlerts').offset().top - 120
+        }, 400);
+
+        // Auto-dismiss success alerts after 10 seconds
+        if (type === 'success') {
+            setTimeout(function() {
+                $('#contactFormAlerts .alert').fadeOut(function() {
+                    $(this).remove();
+                });
+            }, 10000);
+        }
+    }
+
+    // Smooth scroll to form when clicking "scroll-to-form" links
+    $('.scroll-to-form').on('click', function(e) {
+        e.preventDefault();
+        const targetId = $(this).attr('href');
+        const target = $(targetId);
+
+        if (target.length) {
+            $('html, body').animate({
+                scrollTop: target.offset().top - 100
+            }, 800);
+
+            // Focus on first input
+            setTimeout(function() {
+                target.find('input:first').focus();
+            }, 900);
+        }
+    });
+
+    // Form field animations - add focus effect
+    $('.form-control-modern, .form-select-modern').on('focus', function() {
+        $(this).closest('.form-group-modern').addClass('focused');
+    }).on('blur', function() {
+        $(this).closest('.form-group-modern').removeClass('focused');
+    });
+
+    // Character counter for message textarea
+    const messageField = $('#message');
+    if (messageField.length) {
+        const maxLength = 1000;
+
+        // Add counter element
+        messageField.after('<div class="char-counter text-muted text-end mt-1"><span class="current">0</span> / ' + maxLength + ' characters</div>');
+
+        messageField.on('input', function() {
+            const currentLength = $(this).val().length;
+            $(this).siblings('.char-counter').find('.current').text(currentLength);
+
+            if (currentLength > maxLength * 0.9) {
+                $(this).siblings('.char-counter').addClass('text-warning');
+            } else {
+                $(this).siblings('.char-counter').removeClass('text-warning');
+            }
+
+            if (currentLength >= maxLength) {
+                $(this).siblings('.char-counter').addClass('text-danger').removeClass('text-warning');
+            } else {
+                $(this).siblings('.char-counter').removeClass('text-danger');
+            }
+        });
+    }
+
+    // Auto-fill form from URL parameters (useful for campaigns)
+    const urlParams = new URLSearchParams(window.location.search);
+    if (urlParams.has('service')) {
+        $('#service').val(urlParams.get('service'));
+    }
+    if (urlParams.has('email')) {
+        $('#email').val(urlParams.get('email'));
+    }
+
+    // Service field change - show relevant information
+    $('#service').on('change', function() {
+        const selectedService = $(this).val();
+        let infoMessage = '';
+
+        switch(selectedService) {
+            case 'academic-research':
+            case 'thesis-dissertation':
+                infoMessage = 'Great choice! Our academic research support includes methodology, data analysis, and writing assistance.';
+                break;
+            case 'data-analytics':
+            case 'statistical-analysis':
+                infoMessage = 'Excellent! We work with SPSS, R, Python, Stata, and other advanced analytical tools.';
+                break;
+            case 'training':
+                infoMessage = 'Perfect! We offer hands-on training programs with real-world examples and certification.';
+                break;
+            case 'corporate-research':
+                infoMessage = 'Great! Our corporate research services include market analysis, competitive intelligence, and strategic insights.';
+                break;
+        }
+
+        if (infoMessage) {
+            // Show a subtle info message
+            if (!$('#service-info').length) {
+                $('#service').closest('.form-group-modern').after(
+                    '<div id="service-info" class="alert alert-info mt-2 py-2"><i class="bi bi-info-circle me-2"></i><span class="service-info-text"></span></div>'
+                );
+            }
+            $('#service-info .service-info-text').text(infoMessage);
+            $('#service-info').slideDown();
+        } else {
+            $('#service-info').slideUp();
+        }
+    });
+
+    // Timeline field change - show urgency notice for urgent timelines
+    $('#timeline').on('change', function() {
+        const timeline = $(this).val();
+
+        if (timeline === 'urgent') {
+            if (!$('#urgency-notice').length) {
+                $(this).closest('.form-group-modern').after(
+                    '<div id="urgency-notice" class="alert alert-warning mt-2 py-2"><i class="bi bi-exclamation-triangle me-2"></i>For urgent projects, we recommend calling us directly at <strong>' + ($('#phone').attr('placeholder') || '+254 XXX XXX XXX') + '</strong> for immediate assistance.</div>'
+                );
+            }
+        } else {
+            $('#urgency-notice').slideUp(function() {
+                $(this).remove();
+            });
+        }
+    });
+
+    // Phone number formatting (basic Kenya format)
+    $('#phone').on('input', function() {
+        let value = $(this).val().replace(/\D/g, ''); // Remove non-digits
+
+        // Basic formatting for display
+        if (value.length > 0) {
+            if (value.startsWith('254')) {
+                // Format as +254 XXX XXX XXX
+                if (value.length > 3) {
+                    value = '+254 ' + value.substring(3);
+                }
+            } else if (value.startsWith('0')) {
+                // Format as 0XXX XXX XXX
+                // Keep as is
+            }
+        }
+    });
+
+    // Quick action buttons - track clicks (for analytics)
+    $('.quick-action-btn, .method-link').on('click', function() {
+        const method = $(this).hasClass('whatsapp') ? 'WhatsApp' :
+                      $(this).hasClass('phone') ? 'Phone' :
+                      $(this).hasClass('email') ? 'Email' : 'Other';
+
+        console.log('Contact method clicked:', method);
+
+        // In production, send this to analytics
+        // gtag('event', 'contact_method_click', { method: method });
+    });
+});
+
+// Add character counter styles
+const contactStyles = document.createElement('style');
+contactStyles.textContent = `
+    .form-group-modern.focused .form-label-modern {
+        color: var(--primary-color);
+    }
+
+    .char-counter {
+        font-size: 0.85rem;
+        transition: color 0.3s ease;
+    }
+
+    #service-info, #urgency-notice {
+        font-size: 0.95rem;
+        border-radius: 10px;
+        border: none;
+        display: none;
+    }
+
+    .alert-info {
+        background: linear-gradient(135deg, rgba(6, 182, 212, 0.1) 0%, rgba(14, 165, 233, 0.1) 100%);
+        color: #0891b2;
+    }
+
+    .alert-warning {
+        background: linear-gradient(135deg, rgba(245, 158, 11, 0.1) 0%, rgba(251, 146, 60, 0.1) 100%);
+        color: #d97706;
+    }
+
+    #contactFormAlerts .alert {
+        border-radius: 15px;
+        padding: 1.25rem;
+        border: none;
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    .alert-success {
+        background: linear-gradient(135deg, rgba(16, 185, 129, 0.1) 0%, rgba(5, 150, 105, 0.1) 100%);
+        color: #059669;
+    }
+
+    .alert-danger {
+        background: linear-gradient(135deg, rgba(239, 68, 68, 0.1) 0%, rgba(220, 38, 38, 0.1) 100%);
+        color: #dc2626;
+    }
+`;
+document.head.appendChild(contactStyles);
+
