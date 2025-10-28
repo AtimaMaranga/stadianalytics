@@ -1,0 +1,16 @@
+# robots.txt for Stadi Research & Analytics Ltd
+# https://atimamaranga.github.io/stadianalytics
+
+User-agent: *
+Allow: /
+
+# Sitemaps
+Sitemap: https://atimamaranga.github.io/stadianalytics/sitemap.xml
+
+# Crawl-delay (optional, helps prevent server overload)
+Crawl-delay: 1
+
+# Block access to admin/config files (if any)
+Disallow: /Gemfile
+Disallow: /Gemfile.lock
+Disallow: /_config.yml

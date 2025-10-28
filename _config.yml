@@ -1,12 +1,15 @@
 # Site settings
-title: "Stadi Research & Analytics Ltd"
+title: "Stadi Research & Analytics Ltd | Premier Research Consultancy in Kenya & East Africa"
 email: "info@stadiresearch.com"
 description: >-
-  Professional research and analytics consulting services in East Africa. 
-  Academic support, corporate research, data analytics, and capacity building 
-  for students, institutions, businesses, and organizations.
+  Leading research and analytics consultancy in Kenya & East Africa. Expert services in
+  academic research support, market research, data analytics, monitoring & evaluation,
+  and professional training (SPSS, R, Python, Stata). Serving students, universities,
+  businesses, NGOs, and government agencies. 500+ projects | 98% satisfaction | 8+ years excellence.
 baseurl: "/stadianalytics" # the subpath of your site, e.g. /blog
 url: "https://atimamaranga.github.io" # your GitHub Pages URL
+tagline: "Transform Data Into Strategic Insights"
+keywords: "research consultancy Kenya, data analytics East Africa, thesis support, market research, SPSS training, statistical analysis, M&E services, research methods training"
 
 # Build settings
 markdown: kramdown
