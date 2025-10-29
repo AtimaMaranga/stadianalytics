@@ -1,72 +1,168 @@
-<footer class="bg-dark text-light py-5">
-    <div class="container">
-        <div class="row g-4">
-            <div class="col-lg-4">
-                <h5 class="fw-bold mb-3">
-                    <i class="fas fa-chart-line text-primary me-2"></i>
-                    {{ site.title }}
-                </h5>
-                <p class="text-muted">{{ site.description }}</p>
-                <div class="social-links mt-3">
-                    {% if site.social.linkedin %}
-                    <a href="{{ site.social.linkedin }}" class="text-light me-3"><i class="fab fa-linkedin fa-lg"></i></a>
-                    {% endif %}
-                    {% if site.social.twitter %}
-                    <a href="{{ site.social.twitter }}" class="text-light me-3"><i class="fab fa-twitter fa-lg"></i></a>
-                    {% endif %}
-                    {% if site.social.facebook %}
-                    <a href="{{ site.social.facebook }}" class="text-light me-3"><i class="fab fa-facebook fa-lg"></i></a>
-                    {% endif %}
+<!-- Modern Professional Footer -->
+<footer class="footer-modern">
+    <!-- Newsletter Section -->
+    <div class="footer-newsletter">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h3 class="newsletter-title">Stay Updated with Research Insights</h3>
+                    <p class="newsletter-subtitle">Get the latest trends, tips, and exclusive resources delivered to your inbox</p>
                 </div>
-            </div>
-            
-            <div class="col-lg-2 col-md-4">
-                <h6 class="fw-bold mb-3">Services</h6>
-                <ul class="list-unstyled">
-                    <li><a href="{{ '/services/academic-research' | relative_url }}" class="text-muted text-decoration-none">Academic Research</a></li>
-                    <li><a href="{{ '/services/corporate-research' | relative_url }}" class="text-muted text-decoration-none">Corporate Research</a></li>
-                    <li><a href="{{ '/services/data-analytics' | relative_url }}" class="text-muted text-decoration-none">Data Analytics</a></li>
-                    <li><a href="{{ '/services/training' | relative_url }}" class="text-muted text-decoration-none">Training</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-2 col-md-4">
-                <h6 class="fw-bold mb-3">Company</h6>
-                <ul class="list-unstyled">
-                    <li><a href="{{ '/about' | relative_url }}" class="text-muted text-decoration-none">About Us</a></li>
-                    <li><a href="{{ '/portfolio' | relative_url }}" class="text-muted text-decoration-none">Portfolio</a></li>
-                    <li><a href="{{ '/contact' | relative_url }}" class="text-muted text-decoration-none">Contact</a></li>
-                </ul>
-            </div>
-            
-            <div class="col-lg-4 col-md-4">
-                <h6 class="fw-bold mb-3">Contact Info</h6>
-                <div class="contact-info">
-                    <p class="text-muted mb-2">
-                        <i class="fas fa-map-marker-alt me-2"></i>
-                        {{ site.company.address }}
-                    </p>
-                    <p class="text-muted mb-2">
-                        <i class="fas fa-envelope me-2"></i>
-                        <a href="mailto:{{ site.company.email }}" class="text-muted text-decoration-none">{{ site.company.email }}</a>
-                    </p>
-                    <p class="text-muted mb-2">
-                        <i class="fas fa-phone me-2"></i>
-                        {{ site.company.phone }}
-                    </p>
+                <div class="col-lg-6">
+                    <form class="newsletter-form">
+                        <div class="input-group">
+                            <input type="email" class="form-control" placeholder="Enter your email address" required>
+                            <button class="btn btn-gradient-primary" type="submit">
+                                <i class="bi bi-send me-2"></i>Subscribe
+                            </button>
+                        </div>
+                        <small class="form-text">We respect your privacy. Unsubscribe anytime.</small>
+                    </form>
                 </div>
-            </div>
-        </div>
-        
-        <hr class="my-4">
-        
-        <div class="row align-items-center">
-            <div class="col-md-6">
-                <p class="text-muted mb-0">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
-            </div>
-            <div class="col-md-6 text-md-end">
-                <p class="text-muted mb-0">Built with <i class="fas fa-heart text-danger"></i> in {{ site.company.location }}</p>
             </div>
         </div>
     </div>
+
+    <!-- Main Footer Content -->
+    <div class="footer-content">
+        <div class="container">
+            <div class="row g-5">
+                <!-- Company Info -->
+                <div class="col-lg-4 col-md-6">
+                    <div class="footer-brand">
+                        <div class="brand-icon-footer">
+                            <i class="bi bi-graph-up-arrow"></i>
+                        </div>
+                        <h4 class="footer-brand-name">Stadi Research</h4>
+                    </div>
+                    <p class="footer-description">East Africa's premier research and analytics consultancy. Transforming data into strategic insights for over 8 years.</p>
+
+                    <div class="footer-stats">
+                        <div class="footer-stat-item">
+                            <span class="stat-number">500+</span>
+                            <span class="stat-label">Projects</span>
+                        </div>
+                        <div class="footer-stat-item">
+                            <span class="stat-number">98%</span>
+                            <span class="stat-label">Satisfaction</span>
+                        </div>
+                        <div class="footer-stat-item">
+                            <span class="stat-number">15+</span>
+                            <span class="stat-label">Countries</span>
+                        </div>
+                    </div>
+
+                    <div class="social-links-modern mt-4">
+                        <a href="{{ site.social.linkedin }}" class="social-link" title="LinkedIn">
+                            <i class="bi bi-linkedin"></i>
+                        </a>
+                        <a href="{{ site.social.twitter }}" class="social-link" title="Twitter">
+                            <i class="bi bi-twitter"></i>
+                        </a>
+                        <a href="{{ site.social.facebook }}" class="social-link" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                        <a href="https://wa.me/254XXXXXXXXX" class="social-link" title="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Quick Links -->
+                <div class="col-lg-2 col-md-6">
+                    <h5 class="footer-heading">Company</h5>
+                    <ul class="footer-links">
+                        <li><a href="{{ '/about.html' | relative_url }}"><i class="bi bi-chevron-right"></i>About Us</a></li>
+                        <li><a href="{{ '/portfolio.html' | relative_url }}"><i class="bi bi-chevron-right"></i>Portfolio</a></li>
+                        <li><a href="{{ '/training.html' | relative_url }}"><i class="bi bi-chevron-right"></i>Training</a></li>
+                        <li><a href="{{ '/resources.html' | relative_url }}"><i class="bi bi-chevron-right"></i>Resources</a></li>
+                        <li><a href="{{ '/contact.html' | relative_url }}"><i class="bi bi-chevron-right"></i>Contact</a></li>
+                    </ul>
+                </div>
+
+                <!-- Services Links -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Our Services</h5>
+                    <ul class="footer-links">
+                        <li><a href="#services"><i class="bi bi-chevron-right"></i>Academic Research</a></li>
+                        <li><a href="#services"><i class="bi bi-chevron-right"></i>Corporate Research</a></li>
+                        <li><a href="#services"><i class="bi bi-chevron-right"></i>Data Analytics</a></li>
+                        <li><a href="#services"><i class="bi bi-chevron-right"></i>M&E Frameworks</a></li>
+                        <li><a href="#services"><i class="bi bi-chevron-right"></i>Market Research</a></li>
+                        <li><a href="{{ '/training.html' | relative_url }}"><i class="bi bi-chevron-right"></i>Training Programs</a></li>
+                    </ul>
+                </div>
+
+                <!-- Contact Info -->
+                <div class="col-lg-3 col-md-6">
+                    <h5 class="footer-heading">Get In Touch</h5>
+                    <ul class="footer-contact">
+                        <li>
+                            <div class="contact-icon">
+                                <i class="bi bi-geo-alt-fill"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Location</span>
+                                <span class="contact-value">Nairobi, Kenya</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="bi bi-envelope-fill"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Email</span>
+                                <a href="mailto:{{ site.company.email }}" class="contact-value">{{ site.company.email }}</a>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="bi bi-telephone-fill"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Phone</span>
+                                <span class="contact-value">{{ site.company.phone }}</span>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="contact-icon">
+                                <i class="bi bi-clock-fill"></i>
+                            </div>
+                            <div class="contact-details">
+                                <span class="contact-label">Business Hours</span>
+                                <span class="contact-value">Mon-Fri: 8AM-6PM</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer Bottom -->
+    <div class="footer-bottom">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-md-6 mb-3 mb-md-0">
+                    <p class="footer-copyright mb-0">
+                        &copy; {{ 'now' | date: "%Y" }} <strong>Stadi Research & Analytics Ltd</strong>. All rights reserved.
+                    </p>
+                </div>
+                <div class="col-md-6">
+                    <div class="footer-bottom-links">
+                        <a href="{{ '/privacy-policy.html' | relative_url }}">Privacy Policy</a>
+                        <span class="separator">|</span>
+                        <a href="{{ '/terms-of-use.html' | relative_url }}">Terms of Use</a>
+                        <span class="separator">|</span>
+                        <a href="{{ '/contact.html' | relative_url }}">Support</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Back to Top Button -->
+    <button id="backToTop" class="back-to-top" title="Back to top">
+        <i class="bi bi-arrow-up"></i>
+    </button>
 </footer>
