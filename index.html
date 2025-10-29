@@ -1,878 +1,1308 @@
----
-layout: default
-title: "Research & Analytics Consultancy in Kenya | Stadi Research - East Africa's Premier Data Analytics & Research Services"
-description: "Leading research and analytics consultancy in Kenya & East Africa. Expert thesis support, market research, data analytics, M&E, training in SPSS, R, Python, Stata. 500+ projects, 98% satisfaction. Serving students, businesses, NGOs, government agencies."
-keywords: "research consultancy Kenya, data analytics East Africa, thesis support Nairobi, market research Kenya, SPSS training, R programming training, statistical analysis services, monitoring and evaluation, academic research support, corporate research Kenya"
----
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Stadi Research & Analytics - Premier data science and research consultancy providing expert statistical analysis, data analytics, and research support services in Kenya and East Africa." />
+  <title>Stadi Research & Analytics | Data Science & Research Consultancy</title>
 
-<!-- Hero Slider Section -->
-<section id="hero" class="hero-slider section">
-  <div class="hero-slider-container">
-    <!-- Slide 1 -->
-    <div class="hero-slide active" data-slide="1">
-      <div class="hero-slide-bg" style="background: linear-gradient(135deg, rgba(128, 33, 160, 0.95) 0%, rgba(157, 78, 221, 0.95) 100%), url('assets/images/hero-data-analytics.jpg') center/cover;">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-10">
-            <div class="hero-content">
-              <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">Transform Data Into Strategic Insights</h1>
-              <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">East Africa's premier research and analytics consultancy. We deliver evidence-based solutions that drive growth, inform policy, and accelerate academic excellence across the region and beyond.</p>
-              <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-                <a href="#contact" class="btn btn-primary btn-lg">Book Free Consultation</a>
-                <a href="https://wa.me/254XXXXXXXXX" class="btn btn-success btn-lg"><i class="bi bi-whatsapp me-2"></i>WhatsApp Us</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Sora:wght@600;700;800&display=swap" rel="stylesheet">
 
-    <!-- Slide 2 -->
-    <div class="hero-slide" data-slide="2">
-      <div class="hero-slide-bg" style="background: linear-gradient(135deg, rgba(0, 23, 245, 0.95) 0%, rgba(58, 134, 255, 0.95) 100%), url('assets/images/hero-research.jpg') center/cover;">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-10">
-            <div class="hero-content">
-              <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">World-Class Research Excellence</h1>
-              <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">From thesis support to market intelligence, we provide comprehensive research solutions that meet international standards. Our PhD-qualified researchers combine academic rigor with practical business insights.</p>
-              <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-                <a href="#services" class="btn btn-light btn-lg">Explore Our Services</a>
-                <a href="portfolio.html" class="btn btn-outline-light btn-lg">Success Stories</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Slide 3 -->
-    <div class="hero-slide" data-slide="3">
-      <div class="hero-slide-bg" style="background: linear-gradient(135deg, rgba(128, 33, 160, 0.95) 0%, rgba(0, 23, 245, 0.95) 100%), url('assets/images/hero-training.jpg') center/cover;">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-10">
-            <div class="hero-content">
-              <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">Professional Training & Capacity Building</h1>
-              <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">Master cutting-edge research methodologies and data analytics tools. Our hands-on training programs in R, Python, SPSS, and Stata are designed by experts who understand both academia and industry needs.</p>
-              <div class="hero-actions" data-aos="fade-up" data-aos-delay="400">
-                <a href="training.html" class="btn btn-warning btn-lg">Browse Training Programs</a>
-                <a href="#contact" class="btn btn-outline-light btn-lg">Corporate Training Inquiry</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <!-- Tailwind Configuration -->
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#1D3557',
+            secondary: '#6A0DAD',
+            accent: '#A8DADC',
+            light: '#F1FAEE',
+            dark: '#457B9D',
+            'gray-text': '#4A5568',
+            'gray-light': '#F7FAFC'
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            heading: ['Sora', 'sans-serif']
+          },
+          boxShadow: {
+            'lift': '0 10px 20px -5px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05)'
+          },
+          keyframes: {
+            fadeIn: {
+              '0%': { opacity: '0' },
+              '100%': { opacity: '1' }
+            },
+            slideUp: {
+              '0%': { opacity: '0', transform: 'translateY(20px)' },
+              '100%': { opacity: '1', transform: 'translateY(0)' }
+            },
+            slideDown: {
+              '0%': { opacity: '0', maxHeight: '0' },
+              '100%': { opacity: '1', maxHeight: '1000px' }
+            }
+          },
+          animation: {
+            fadeIn: 'fadeIn 0.6s ease-out',
+            slideUp: 'slideUp 0.6s ease-out',
+            slideDown: 'slideDown 0.3s ease-out'
+          }
+        }
+      }
+    }
+  </script>
 
-    <!-- Slide 4 -->
-    <div class="hero-slide" data-slide="4">
-      <div class="hero-slide-bg" style="background: linear-gradient(135deg, rgba(157, 78, 221, 0.95) 0%, rgba(58, 134, 255, 0.95) 100%), url('assets/images/hero-consulting.jpg') center/cover;">
-        <div class="hero-overlay"></div>
-      </div>
-      <div class="container">
-        <div class="row justify-content-center text-center">
-          <div class="col-lg-10">
-            <div class="hero-content">
-              <h1 class="hero-title" data-aos="fade-up" data-aos-delay="200">Trusted by Leading Organizations</h1>
-              <p class="hero-subtitle" data-aos="fade-up" data-aos-delay="300">Universities, NGOs, government agencies, and Fortune 500 companies across East Africa trust Stadi Research for their most critical research, evaluation, and analytics initiatives.</p>
-              <div class="hero-stats-inline" data-aos="fade-up" data-aos-delay="400">
-                <div class="stat-inline">
-                  <span class="stat-number">500+</span>
-                  <span class="stat-label">Projects Delivered</span>
-                </div>
-                <div class="stat-inline">
-                  <span class="stat-number">8+</span>
-                  <span class="stat-label">Years Excellence</span>
-                </div>
-                <div class="stat-inline">
-                  <span class="stat-number">98%</span>
-                  <span class="stat-label">Client Satisfaction</span>
-                </div>
-                <div class="stat-inline">
-                  <span class="stat-number">15+</span>
-                  <span class="stat-label">Countries Served</span>
-                </div>
-              </div>
-              <div class="hero-actions mt-4" data-aos="fade-up" data-aos-delay="500">
-                <a href="about.html" class="btn btn-light btn-lg">Discover Our Story</a>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
 
-    <!-- Navigation Arrows -->
-    <button class="hero-nav hero-nav-prev" aria-label="Previous slide">
-      <i class="bi bi-chevron-left"></i>
-    </button>
-    <button class="hero-nav hero-nav-next" aria-label="Next slide">
-      <i class="bi bi-chevron-right"></i>
-    </button>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #4A5568;
+    }
 
-    <!-- Navigation Dots -->
-    <div class="hero-dots">
-      <button class="hero-dot active" data-slide="1" aria-label="Go to slide 1"></button>
-      <button class="hero-dot" data-slide="2" aria-label="Go to slide 2"></button>
-      <button class="hero-dot" data-slide="3" aria-label="Go to slide 3"></button>
-      <button class="hero-dot" data-slide="4" aria-label="Go to slide 4"></button>
-    </div>
-  </div>
+    h1, h2, h3, h4, h5, h6 {
+      font-family: 'Sora', sans-serif;
+    }
 
-  <!-- Trust Indicators Section (below slider) -->
-  <div class="hero-trust-section">
-    <div class="container">
-      <div class="row justify-content-center text-center">
-        <div class="col-lg-12">
-          <p class="trust-text mb-4">Trusted by leading organizations across East Africa</p>
-          <div class="trust-logos">
-            <div class="trust-logo-item">Universities</div>
-            <div class="trust-logo-item">NGOs</div>
-            <div class="trust-logo-item">Government</div>
-            <div class="trust-logo-item">Businesses</div>
-            <div class="trust-logo-item">Researchers</div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<!-- About Section -->
-<section id="about" class="about section">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row align-items-center">
-      <div class="col-lg-6 order-2 order-lg-1" data-aos="fade-right" data-aos-delay="200">
-        <div class="content">
-          <h2 class="section-heading mb-4">East Africa's Leading Research & Analytics Consultancy</h2>
-          <p class="lead-text mb-4">Stadi Research & Analytics Ltd is a premier research consultancy headquartered in Nairobi, Kenya, delivering world-class research, data analytics, and capacity building solutions that transform organizations and accelerate academic success across East Africa and beyond.</p>
-          <p class="description-text mb-5">With over 8 years of proven excellence, we serve a dual mission: empowering students and academic institutions with rigorous research methodologies and statistical expertise, while providing businesses, NGOs, government agencies, and international organizations with strategic intelligence, market research, and monitoring & evaluation frameworks that drive evidence-based decision-making and sustainable growth.</p>
+    ::-webkit-scrollbar {
+      width: 10px;
+    }
 
-          <div class="stats-grid">
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Projects Completed</div>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="350">
-              <div class="stat-number">98%</div>
-              <div class="stat-label">Client Satisfaction</div>
-            </div>
-            <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
-              <div class="stat-number">50+</div>
-              <div class="stat-label">Organizations Served</div>
-            </div>
-          </div>
+    ::-webkit-scrollbar-track {
+      background: #f1f1f1;
+    }
 
-          <div class="cta-section" data-aos="fade-up" data-aos-delay="450">
-            <a href="#services" class="cta-link">
-              Explore Our Services
-              <i class="bi bi-arrow-right ms-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+    ::-webkit-scrollbar-thumb {
+      background: #6A0DAD;
+      border-radius: 5px;
+    }
 
-      <div class="col-lg-6 order-1 order-lg-2" data-aos="fade-left" data-aos-delay="200">
-        <div class="image-section">
-          <div class="main-image">
-            <div class="chart-placeholder bg-primary rounded-4 d-flex align-items-center justify-content-center" style="height: 400px;">
-              <i class="bi bi-graph-up fa-10x text-white opacity-75"></i>
-            </div>
-          </div>
-          <div class="floating-badge" data-aos="zoom-in" data-aos-delay="500">
-            <div class="badge-content">
-              <i class="bi bi-award"></i>
-              <div class="badge-text">
-                <span class="badge-title">Excellence Certified</span>
-                <span class="badge-subtitle">Since 2016</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    ::-webkit-scrollbar-thumb:hover {
+      background: #520887;
+    }
 
-<!-- Services Section -->
-<section id="services" class="services section light-background">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Comprehensive Research & Analytics Solutions</h2>
-    <p>Industry-leading services designed to drive academic excellence, business growth, and evidence-based decision-making across East Africa</p>
-  </div>
+    /* Ensure smooth transitions */
+    .transition-all {
+      transition-property: all;
+      transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+      transition-duration: 300ms;
+    }
+  </style>
+</head>
+<body>
+  <div id="root"></div>
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="services-grid">
+  <!-- React, ReactDOM, and Babel -->
+  <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+  <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
 
-      <div class="service-item" data-aos="fade-up" data-aos-delay="150">
-        <div class="service-number">01</div>
-        <div class="service-icon">
-          <i class="bi bi-mortarboard"></i>
-        </div>
-        <h3>Academic Research Support & Thesis Assistance</h3>
-        <p>Expert guidance for undergraduate, master's, and PhD students including research design, literature reviews, data collection, statistical analysis (SPSS, R, Stata, Python), academic writing, and dissertation formatting. We ensure your research meets the highest academic standards.</p>
-        <a href="#contact" class="service-cta">
-          <span>Get Academic Support</span>
-          <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
+  <!-- Main Application -->
+  <script type="text/babel">
+    const { useState, useEffect, createElement: h } = React;
 
-      <div class="service-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-number">02</div>
-        <div class="service-icon">
-          <i class="bi bi-building"></i>
-        </div>
-        <h3>Corporate Research & Business Intelligence</h3>
-        <p>Strategic research solutions for businesses, NGOs, and government agencies including market intelligence, competitor analysis, consumer insights, policy research, and organizational assessments. Transform data into strategic advantage.</p>
-        <a href="#contact" class="service-cta">
-          <span>Request Consultation</span>
-          <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
+    // ============================================
+    // CONSTANTS & DATA
+    // ============================================
 
-      <div class="service-item featured" data-aos="fade-up" data-aos-delay="250">
-        <div class="featured-badge">Most Popular</div>
-        <div class="service-number">03</div>
-        <div class="service-icon">
-          <i class="bi bi-graph-up-arrow"></i>
-        </div>
-        <h3>Advanced Data Analytics & Visualization</h3>
-        <p>Cutting-edge data analytics using Python, R, and specialized BI tools. Services include predictive modeling, statistical analysis, data mining, machine learning applications, interactive dashboards, and custom visualization solutions for complex datasets.</p>
-        <a href="#contact" class="service-cta">
-          <span>Get Custom Quote</span>
-          <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
+    const NAV_LINKS = [
+      { name: 'Home', path: '#home' },
+      { name: 'About', path: '#about' },
+      { name: 'Services', path: '#services' },
+      { name: 'Training', path: '#training' },
+      { name: 'Case Studies', path: '#case-studies' },
+      { name: 'Contact', path: '#contact' }
+    ];
 
-      <div class="service-item" data-aos="fade-up" data-aos-delay="300">
-        <div class="service-number">04</div>
-        <div class="service-icon">
-          <i class="bi bi-people"></i>
-        </div>
-        <h3>Professional Training & Capacity Building</h3>
-        <p>Hands-on training programs in research methodologies, SPSS, R programming, Python for data science, Stata, qualitative analysis (NVivo), survey design, and statistical techniques. Available for individuals, academic institutions, and corporate teams.</p>
-        <a href="training.html" class="service-cta">
-          <span>Browse Training Programs</span>
-          <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
+    const HERO_SLIDES = [
+      {
+        id: 1,
+        title: 'Transform Data Into Strategic Insights',
+        subtitle: 'East Africa\'s premier research and analytics consultancy delivering evidence-based solutions that drive growth and academic excellence.',
+        image: 'https://picsum.photos/seed/data1/1920/1080',
+        cta1: { text: 'Book a Free Consultation', link: '#contact' },
+        cta2: { text: 'WhatsApp Us', link: 'https://wa.me/254XXXXXXXXX' }
+      },
+      {
+        id: 2,
+        title: 'World-Class Research Excellence',
+        subtitle: 'From thesis support to market intelligence, we provide comprehensive research solutions meeting international standards.',
+        image: 'https://picsum.photos/seed/research2/1920/1080',
+        cta1: { text: 'Explore Services', link: '#services' },
+        cta2: { text: 'Success Stories', link: '#case-studies' }
+      },
+      {
+        id: 3,
+        title: 'Professional Training & Capacity Building',
+        subtitle: 'Master cutting-edge research methodologies and data analytics tools with hands-on training programs.',
+        image: 'https://picsum.photos/seed/training3/1920/1080',
+        cta1: { text: 'Browse Programs', link: '#training' },
+        cta2: { text: 'Corporate Training', link: '#contact' }
+      }
+    ];
 
-      <div class="service-item" data-aos="fade-up" data-aos-delay="350">
-        <div class="service-number">05</div>
-        <div class="service-icon">
-          <i class="bi bi-clipboard-data"></i>
-        </div>
-        <h3>Monitoring, Evaluation & Impact Assessment</h3>
-        <p>Design and implementation of robust M&E frameworks, baseline and endline surveys, impact evaluations, program assessments, and performance measurement systems that comply with international donor requirements and best practices.</p>
-        <a href="#contact" class="service-cta">
-          <span>Discuss M&E Needs</span>
-          <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
+    const CLIENTS_LOGOS = [
+      'Universities', 'NGOs', 'Government', 'Businesses', 'Researchers'
+    ];
 
-      <div class="service-item" data-aos="fade-up" data-aos-delay="400">
-        <div class="service-number">06</div>
-        <div class="service-icon">
-          <i class="bi bi-search"></i>
-        </div>
-        <h3>Market Research & Feasibility Studies</h3>
-        <p>Comprehensive market analysis, feasibility studies, opportunity assessments, consumer behavior research, brand perception studies, and due diligence investigations to support business expansion, investment decisions, and market entry strategies.</p>
-        <a href="#contact" class="service-cta">
-          <span>Start Market Research</span>
-          <i class="bi bi-arrow-right"></i>
-        </a>
-      </div>
-    </div>
-  </div>
-</section>
+    const SERVICES_DATA = [
+      {
+        id: 'academic-research',
+        icon: '🎓',
+        title: 'Academic Research Support',
+        shortDescription: 'Expert guidance for thesis, dissertations, and research projects at all academic levels.',
+        longDescription: 'Comprehensive support for students and researchers including research design, literature reviews, data collection, statistical analysis using SPSS, R, Stata, and Python, academic writing, and formatting. We ensure your research meets the highest academic standards while helping you build valuable research skills.',
+        tools: ['SPSS', 'R', 'Python', 'Stata', 'NVivo', 'EndNote'],
+        industries: ['Universities', 'Research Institutions', 'Graduate Students', 'Academic Publishing']
+      },
+      {
+        id: 'corporate-research',
+        icon: '🏢',
+        title: 'Corporate Research & Business Intelligence',
+        shortDescription: 'Strategic research solutions for businesses, NGOs, and government agencies.',
+        longDescription: 'Transform data into strategic advantage with our corporate research services including market intelligence, competitor analysis, consumer insights, policy research, and organizational assessments. We deliver actionable insights that drive business growth and informed decision-making.',
+        tools: ['Tableau', 'Power BI', 'Python', 'SQL', 'Excel', 'SPSS'],
+        industries: ['Financial Services', 'Healthcare', 'Retail', 'Technology', 'Manufacturing', 'NGOs']
+      },
+      {
+        id: 'data-analytics',
+        icon: '📊',
+        title: 'Advanced Data Analytics',
+        shortDescription: 'Cutting-edge analytics using Python, R, and specialized BI tools.',
+        longDescription: 'Unlock the power of your data with advanced analytics including predictive modeling, statistical analysis, data mining, machine learning applications, interactive dashboards, and custom visualization solutions for complex datasets.',
+        tools: ['Python', 'R', 'Tableau', 'Power BI', 'SQL', 'TensorFlow'],
+        industries: ['E-commerce', 'Finance', 'Healthcare', 'Marketing', 'Logistics', 'Telecommunications']
+      },
+      {
+        id: 'training',
+        icon: '👥',
+        title: 'Professional Training',
+        shortDescription: 'Hands-on training in research methods and data analytics tools.',
+        longDescription: 'Build practical skills with our expert-led training programs covering research methodologies, SPSS, R programming, Python for data science, Stata, qualitative analysis with NVivo, survey design, and statistical techniques. Available for individuals, academic institutions, and corporate teams.',
+        tools: ['SPSS', 'R', 'Python', 'Stata', 'NVivo', 'Excel'],
+        industries: ['Academia', 'Corporate', 'Government', 'NGOs', 'Research Firms']
+      },
+      {
+        id: 'monitoring-evaluation',
+        icon: '📋',
+        title: 'Monitoring & Evaluation',
+        shortDescription: 'Design and implementation of robust M&E frameworks.',
+        longDescription: 'Comprehensive M&E services including framework design, baseline and endline surveys, impact evaluations, program assessments, and performance measurement systems that comply with international donor requirements and best practices.',
+        tools: ['ODK', 'KoBoToolbox', 'SPSS', 'R', 'Stata', 'Excel'],
+        industries: ['NGOs', 'International Development', 'Government', 'Foundations', 'UN Agencies']
+      },
+      {
+        id: 'market-research',
+        icon: '🔍',
+        title: 'Market Research & Feasibility',
+        shortDescription: 'Comprehensive market analysis and feasibility studies.',
+        longDescription: 'Strategic market insights including market analysis, feasibility studies, opportunity assessments, consumer behavior research, brand perception studies, and due diligence investigations to support business expansion and investment decisions.',
+        tools: ['SPSS', 'R', 'Survey Tools', 'GIS', 'Excel', 'Tableau'],
+        industries: ['Retail', 'Real Estate', 'FMCG', 'Technology', 'Hospitality', 'Agriculture']
+      }
+    ];
 
-<!-- Dual Pathways Section -->
-<section id="pathways" class="services-alt section light-background">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row text-center mb-5">
-      <div class="col-12">
-        <h2 class="display-5 fw-bold mb-3">Choose Your Path</h2>
-        <p class="lead text-muted">Tailored solutions for different needs</p>
-      </div>
-    </div>
+    const TESTIMONIALS_DATA = [
+      {
+        id: 1,
+        quote: 'Stadi Research provided exceptional support for my dissertation. Their statistical analysis expertise was invaluable.',
+        author: 'Dr. Sarah Kimani',
+        role: 'PhD Student, University of Nairobi',
+        avatar: 'https://picsum.photos/seed/sarah/100/100'
+      },
+      {
+        id: 2,
+        quote: 'The M&E framework developed transformed our project monitoring capabilities. Highly professional team.',
+        author: 'James Mwangi',
+        role: 'Executive Director, Green Future NGO',
+        avatar: 'https://picsum.photos/seed/james/100/100'
+      },
+      {
+        id: 3,
+        quote: 'Outstanding research methodology training. The trainers were knowledgeable and patient.',
+        author: 'Fatuma Hassan',
+        role: 'Master\'s Student, Strathmore University',
+        avatar: 'https://picsum.photos/seed/fatuma/100/100'
+      }
+    ];
 
-    <div class="row g-5">
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="service-item">
-          <div class="service-visual bg-primary rounded-4 d-flex align-items-center justify-content-center" style="height: 200px;">
-            <i class="bi bi-mortarboard text-white" style="font-size: 4rem;"></i>
-          </div>
-          <div class="service-content">
-            <h3>Students & Academics</h3>
-            <p>Research support, thesis guidance, statistical analysis, and academic writing assistance for all levels of education. We mentor you through the research process while building your skills.</p>
-            <ul class="list-unstyled mb-4">
-              <li><i class="bi bi-check text-success me-2"></i>Thesis & Dissertation Support</li>
-              <li><i class="bi bi-check text-success me-2"></i>Statistical Analysis (SPSS, R, Python, Stata)</li>
-              <li><i class="bi bi-check text-success me-2"></i>Literature Review & Research Design</li>
-              <li><i class="bi bi-check text-success me-2"></i>Academic Writing & Formatting</li>
-            </ul>
-            <a href="#contact" class="service-link">
-              <span>Get Academic Support</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
+    const TRAINING_COURSES = [
+      {
+        id: 1,
+        title: 'Research Methods & Design',
+        description: 'Comprehensive introduction to research methodologies, sampling techniques, and study design.',
+        outcomes: [
+          'Research problem formulation and literature review',
+          'Quantitative and qualitative research designs',
+          'Sampling techniques and sample size determination',
+          'Data collection methods and instrument design'
+        ],
+        prerequisites: 'Basic understanding of research concepts',
+        duration: '5 Days',
+        price: 'KES 25,000',
+        date: 'Dec 15-19, 2025',
+        mode: 'In-person / Online'
+      },
+      {
+        id: 2,
+        title: 'Data Analysis with R',
+        description: 'Master data manipulation, visualization, and statistical analysis using R programming.',
+        outcomes: [
+          'R basics: syntax, data structures, and functions',
+          'Data wrangling with dplyr and tidyr',
+          'Data visualization with ggplot2',
+          'Descriptive and inferential statistics in R'
+        ],
+        prerequisites: 'Basic computer skills',
+        duration: '5 Days',
+        price: 'KES 30,000',
+        date: 'Jan 8-12, 2026',
+        mode: 'In-person / Online',
+        popular: true
+      },
+      {
+        id: 3,
+        title: 'SPSS for Beginners',
+        description: 'Comprehensive training in statistical analysis using SPSS from basics to advanced procedures.',
+        outcomes: [
+          'SPSS interface and data management',
+          'Descriptive statistics and visualization',
+          'Hypothesis testing (t-tests, ANOVA, chi-square)',
+          'Correlation and regression analysis'
+        ],
+        prerequisites: 'None',
+        duration: '5 Days',
+        price: 'KES 25,000',
+        date: 'Jan 22-26, 2026',
+        mode: 'In-person / Online'
+      }
+    ];
 
-      <div class="col-lg-6" data-aos="fade-up" data-aos-delay="250">
-        <div class="service-item">
-          <div class="service-visual bg-success rounded-4 d-flex align-items-center justify-content-center" style="height: 200px;">
-            <i class="bi bi-building text-white" style="font-size: 4rem;"></i>
-          </div>
-          <div class="service-content">
-            <h3>Organizations</h3>
-            <p>Corporate research, market analysis, M&E frameworks, and strategic consulting for businesses, NGOs, and government agencies across East Africa.</p>
-            <ul class="list-unstyled mb-4">
-              <li><i class="bi bi-check text-success me-2"></i>Market Research & Feasibility Studies</li>
-              <li><i class="bi bi-check text-success me-2"></i>M&E Framework Development</li>
-              <li><i class="bi bi-check text-success me-2"></i>Data Analytics & Business Intelligence</li>
-              <li><i class="bi bi-check text-success me-2"></i>Strategic Consulting & Planning</li>
-            </ul>
-            <a href="#contact" class="service-link">
-              <span>Get Corporate Solutions</span>
-              <i class="bi bi-arrow-right"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    const CASE_STUDIES_DATA = [
+      {
+        id: 1,
+        title: 'Healthcare Access Study',
+        sector: 'Healthcare',
+        client: 'Major International NGO',
+        challenge: 'Assessment of healthcare accessibility in rural Kenya',
+        approach: 'Multi-stage sampling covering 5,000 households across 10 counties with mixed methods approach',
+        results: 'Comprehensive policy recommendations adopted by county governments',
+        metrics: { respondents: '5,000+', counties: '10', duration: '3 Months' },
+        image: 'https://picsum.photos/seed/health1/800/600'
+      },
+      {
+        id: 2,
+        title: 'Market Feasibility Study',
+        sector: 'Retail',
+        client: 'Leading Retail Chain',
+        challenge: 'Feasibility analysis for expansion into East African markets',
+        approach: 'Market analysis across 3 countries with 2,000+ consumer surveys and competitor intelligence',
+        results: 'Successful market entry strategy with 25% first-year growth',
+        metrics: { countries: '3', surveys: '2,000+', duration: '2 Months' },
+        image: 'https://picsum.photos/seed/retail2/800/600'
+      },
+      {
+        id: 3,
+        title: 'PhD Dissertation Support',
+        sector: 'Academia',
+        client: 'Doctoral Candidate',
+        challenge: 'Complex mixed-methods research on education policy implementation',
+        approach: 'Research design, data collection from 50+ schools, advanced statistical analysis, and writing support',
+        results: 'Successfully defended with distinction, published in peer-reviewed journal',
+        metrics: { schools: '50+', methods: 'Mixed', duration: '6 Months' },
+        image: 'https://picsum.photos/seed/academic3/800/600'
+      },
+      {
+        id: 4,
+        title: 'Financial Sector Analysis',
+        sector: 'FinTech',
+        client: 'Mobile Money Provider',
+        challenge: 'Customer behavior analysis and churn prediction',
+        approach: 'Big data analytics on 2M+ transactions using machine learning models',
+        results: '30% reduction in customer churn, $2M annual savings',
+        metrics: { transactions: '2M+', reduction: '30%', savings: '$2M' },
+        image: 'https://picsum.photos/seed/fintech4/800/600'
+      }
+    ];
 
-<!-- Testimonials Section -->
-<section id="testimonials" class="testimonials section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>What Clients Say</h2>
-    <p>Trusted by students and organizations across East Africa</p>
-  </div>
+    const FAQ_DATA = [
+      {
+        id: 1,
+        question: 'How quickly can you start my project?',
+        answer: 'Most projects can begin within 48 hours of agreement. Urgent projects may start the same day, depending on availability and complexity.'
+      },
+      {
+        id: 2,
+        question: 'What are your payment terms?',
+        answer: 'We typically require 50% upfront payment and 50% upon completion. For longer projects, we can arrange milestone-based payments.'
+      },
+      {
+        id: 3,
+        question: 'Do you work with international clients?',
+        answer: 'Yes! We work with clients globally, especially those with interests in East African markets. All consultations can be conducted remotely.'
+      },
+      {
+        id: 4,
+        question: 'What software do you use for analysis?',
+        answer: 'We use industry-standard tools including SPSS, R, Python, Stata, and Excel for analysis, plus specialized software based on project requirements.'
+      }
+    ];
 
-  <div class="container">
-    <div class="testimonial-masonry">
-      
-      <div class="testimonial-item" data-aos="fade-up">
-        <div class="testimonial-content">
-          <div class="quote-pattern">
-            <i class="bi bi-quote"></i>
-          </div>
-          <p>Stadi Research provided exceptional support for my dissertation. Their statistical analysis expertise and guidance through complex data interpretation was invaluable.</p>
-          <div class="client-info">
-            <div class="client-image bg-primary rounded-circle d-flex align-items-center justify-content-center">
-              <i class="bi bi-person text-white"></i>
-            </div>
-            <div class="client-details">
-              <h3>Dr. Sarah Kimani</h3>
-              <span class="position">PhD Student, University of Nairobi</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    // ============================================
+    // ICON COMPONENTS
+    // ============================================
 
-      <div class="testimonial-item highlight" data-aos="fade-up" data-aos-delay="100">
-        <div class="testimonial-content">
-          <div class="quote-pattern">
-            <i class="bi bi-quote"></i>
-          </div>
-          <p>The M&E framework developed by Stadi Research transformed our project monitoring capabilities. Their team understood our needs perfectly and delivered a comprehensive solution on time.</p>
-          <div class="client-info">
-            <div class="client-image bg-success rounded-circle d-flex align-items-center justify-content-center">
-              <i class="bi bi-person text-white"></i>
-            </div>
-            <div class="client-details">
-              <h3>James Mwangi</h3>
-              <span class="position">Executive Director, Green Future NGO</span>
-            </div>
-          </div>
-        </div>
-      </div>
+    const MenuIcon = () => (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+      </svg>
+    );
 
-      <div class="testimonial-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="testimonial-content">
-          <div class="quote-pattern">
-            <i class="bi bi-quote"></i>
-          </div>
-          <p>The research methodology training I received was outstanding. The trainers were knowledgeable and patient, helping me understand complex statistical concepts.</p>
-          <div class="client-info">
-            <div class="client-image bg-info rounded-circle d-flex align-items-center justify-content-center">
-              <i class="bi bi-person text-white"></i>
-            </div>
-            <div class="client-details">
-              <h3>Fatuma Hassan</h3>
-              <span class="position">Master's Student, Strathmore University</span>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+    const XIcon = () => (
+      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+      </svg>
+    );
 
-<!-- Call To Action Section -->
-<section id="call-to-action" class="call-to-action section light-background">
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row justify-content-center">
-      <div class="col-lg-10">
-        <div class="cta-header text-center" data-aos="fade-up" data-aos-delay="200">
-          <h2>Transform Your Vision Into Reality</h2>
-          <p>Ready to unlock the power of data-driven insights? Our dedicated research team delivers excellence through innovation and expertise tailored to your unique needs.</p>
-        </div>
-      </div>
-    </div>
+    const ChevronDownIcon = () => (
+      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+      </svg>
+    );
 
-    <div class="cta-main" data-aos="fade-up" data-aos-delay="300">
-      <div class="row align-items-center g-5">
-        <div class="col-lg-6">
-          <div class="achievements-grid">
-            <div class="achievement-item" data-aos="zoom-in" data-aos-delay="400">
-              <div class="achievement-icon">
-                <i class="bi bi-graph-up"></i>
-              </div>
-              <div class="achievement-info">
-                <h3>500+</h3>
-                <span>Projects Delivered</span>
-              </div>
-            </div>
+    const ChevronLeftIcon = () => (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+      </svg>
+    );
 
-            <div class="achievement-item" data-aos="zoom-in" data-aos-delay="450">
-              <div class="achievement-icon">
-                <i class="bi bi-clock-history"></i>
-              </div>
-              <div class="achievement-info">
-                <h3>8+</h3>
-                <span>Years Established</span>
-              </div>
-            </div>
+    const ChevronRightIcon = () => (
+      <svg className="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+      </svg>
+    );
 
-            <div class="achievement-item" data-aos="zoom-in" data-aos-delay="500">
-              <div class="achievement-icon">
-                <i class="bi bi-shield-check"></i>
-              </div>
-              <div class="achievement-info">
-                <h3>98%</h3>
-                <span>Client Satisfaction</span>
-              </div>
-            </div>
+    const WhatsAppIcon = () => (
+      <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 24 24">
+        <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L0 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.890-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z"/>
+      </svg>
+    );
 
-            <div class="achievement-item" data-aos="zoom-in" data-aos-delay="550">
-              <div class="achievement-icon">
-                <i class="bi bi-people"></i>
-              </div>
-              <div class="achievement-info">
-                <h3>50+</h3>
-                <span>Organizations Served</span>
-              </div>
-            </div>
-          </div>
-        </div>
+    // ============================================
+    // BUTTON COMPONENT
+    // ============================================
 
-        <div class="col-lg-6">
-          <div class="action-panel" data-aos="fade-left" data-aos-delay="350">
-            <div class="panel-content">
-              <h3>Ready to Get Started?</h3>
-              <p>Let's discuss your research needs and create a customized solution for your project. Join hundreds of satisfied clients who trust Stadi Research for their most important work.</p>
+    const Button = ({ children, variant = 'primary', className = '', onClick, href }) => {
+      const baseClasses = 'inline-flex items-center justify-center px-6 py-3 rounded-full font-semibold transition-all hover:scale-105 focus:outline-none focus:ring-2 focus:ring-offset-2';
 
-              <div class="action-buttons">
-                <a href="#contact" class="btn-primary">
-                  <span>Start Your Project</span>
-                  <i class="bi bi-arrow-right"></i>
-                </a>
-                <a href="#services" class="btn-secondary">
-                  <span>View Services</span>
-                  <i class="bi bi-eye"></i>
+      const variantClasses = {
+        primary: 'bg-secondary text-white hover:bg-opacity-90 focus:ring-secondary',
+        secondary: 'bg-primary text-white hover:bg-opacity-90 focus:ring-primary',
+        outline: 'bg-transparent border-2 border-primary text-primary hover:bg-primary hover:text-white focus:ring-primary'
+      };
+
+      const classes = `${baseClasses} ${variantClasses[variant]} ${className}`;
+
+      if (href) {
+        return (
+          <a href={href} className={classes} onClick={onClick}>
+            {children}
+          </a>
+        );
+      }
+
+      return (
+        <button className={classes} onClick={onClick}>
+          {children}
+        </button>
+      );
+    };
+
+    // ============================================
+    // HEADER COMPONENT
+    // ============================================
+
+    const Header = () => {
+      const [isScrolled, setIsScrolled] = useState(false);
+      const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+
+      useEffect(() => {
+        const handleScroll = () => {
+          setIsScrolled(window.scrollY > 50);
+        };
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+      }, []);
+
+      const handleNavClick = (e, path) => {
+        e.preventDefault();
+        setIsMobileMenuOpen(false);
+        const element = document.querySelector(path);
+        if (element) {
+          element.scrollIntoView({ behavior: 'smooth' });
+        }
+      };
+
+      return (
+        <header className={`fixed top-0 left-0 right-0 z-50 transition-all ${isScrolled ? 'bg-white/80 backdrop-blur-md shadow-md' : 'bg-transparent'}`}>
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="flex justify-between items-center h-20">
+              {/* Logo */}
+              <div className="flex-shrink-0">
+                <a href="#home" className="text-2xl font-heading font-bold text-primary">
+                  Stadi<span className="text-secondary">.</span>
                 </a>
               </div>
-            </div>
 
-            <div class="contact-quick">
-              <div class="contact-row">
-                <i class="bi bi-telephone-fill"></i>
-                <div class="contact-details">
-                  <span class="contact-label">Direct Line</span>
-                  <span class="contact-value">+254 XXX XXX XXX</span>
+              {/* Desktop Navigation */}
+              <nav className="hidden md:flex space-x-8">
+                {NAV_LINKS.map(link => (
+                  <a
+                    key={link.name}
+                    href={link.path}
+                    onClick={(e) => handleNavClick(e, link.path)}
+                    className={`font-medium transition-colors ${isScrolled ? 'text-gray-text hover:text-secondary' : 'text-white hover:text-accent'}`}
+                  >
+                    {link.name}
+                  </a>
+                ))}
+              </nav>
+
+              {/* CTA Button - Desktop */}
+              <div className="hidden md:block">
+                <Button variant="primary" href="#contact">
+                  Book a Consultation
+                </Button>
+              </div>
+
+              {/* Mobile Menu Button */}
+              <button
+                className="md:hidden p-2"
+                onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              >
+                {isMobileMenuOpen ? (
+                  <XIcon />
+                ) : (
+                  <MenuIcon />
+                )}
+              </button>
+            </div>
+          </div>
+
+          {/* Mobile Menu */}
+          {isMobileMenuOpen && (
+            <div className="md:hidden bg-white shadow-lg">
+              <nav className="px-4 py-6 space-y-4">
+                {NAV_LINKS.map(link => (
+                  <a
+                    key={link.name}
+                    href={link.path}
+                    onClick={(e) => handleNavClick(e, link.path)}
+                    className="block text-gray-text hover:text-secondary font-medium"
+                  >
+                    {link.name}
+                  </a>
+                ))}
+                <Button variant="primary" href="#contact" className="w-full">
+                  Book a Consultation
+                </Button>
+              </nav>
+            </div>
+          )}
+        </header>
+      );
+    };
+
+    // ============================================
+    // HERO SECTION WITH CAROUSEL
+    // ============================================
+
+    const Hero = () => {
+      const [currentSlide, setCurrentSlide] = useState(0);
+
+      useEffect(() => {
+        const timer = setInterval(() => {
+          setCurrentSlide(prev => (prev + 1) % HERO_SLIDES.length);
+        }, 5000);
+        return () => clearInterval(timer);
+      }, []);
+
+      const nextSlide = () => setCurrentSlide((prev) => (prev + 1) % HERO_SLIDES.length);
+      const prevSlide = () => setCurrentSlide((prev) => (prev - 1 + HERO_SLIDES.length) % HERO_SLIDES.length);
+
+      return (
+        <section id="home" className="relative h-screen">
+          {/* Slides */}
+          {HERO_SLIDES.map((slide, index) => (
+            <div
+              key={slide.id}
+              className={`absolute inset-0 transition-opacity duration-1000 ${index === currentSlide ? 'opacity-100' : 'opacity-0'}`}
+              style={{
+                backgroundImage: `linear-gradient(rgba(29, 53, 87, 0.7), rgba(106, 13, 173, 0.7)), url(${slide.image})`,
+                backgroundSize: 'cover',
+                backgroundPosition: 'center'
+              }}
+            >
+              <div className="flex items-center justify-center h-full px-4">
+                <div className="max-w-4xl text-center text-white animate-slideUp">
+                  <h1 className="text-4xl md:text-6xl font-heading font-bold mb-6">
+                    {slide.title}
+                  </h1>
+                  <p className="text-xl md:text-2xl mb-8 text-gray-100">
+                    {slide.subtitle}
+                  </p>
+                  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                    <Button variant="primary" href={slide.cta1.link}>
+                      {slide.cta1.text}
+                    </Button>
+                    <Button variant="outline" href={slide.cta2.link} className="border-white text-white hover:bg-white hover:text-primary">
+                      {slide.cta2.text}
+                    </Button>
+                  </div>
                 </div>
               </div>
+            </div>
+          ))}
 
-              <div class="contact-row">
-                <i class="bi bi-envelope-fill"></i>
-                <div class="contact-details">
-                  <span class="contact-label">Email Us</span>
-                  <span class="contact-value">info@stadiresearch.com</span>
+          {/* Navigation Arrows */}
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white hover:text-accent transition-colors p-2"
+          >
+            <ChevronLeftIcon />
+          </button>
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white hover:text-accent transition-colors p-2"
+          >
+            <ChevronRightIcon />
+          </button>
+
+          {/* Dots */}
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex space-x-3">
+            {HERO_SLIDES.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentSlide(index)}
+                className={`w-3 h-3 rounded-full transition-all ${index === currentSlide ? 'bg-white w-8' : 'bg-white/50'}`}
+              />
+            ))}
+          </div>
+
+          {/* Trusted By Section */}
+          <div className="absolute bottom-0 left-0 right-0 bg-white/90 backdrop-blur-sm py-6">
+            <div className="max-w-7xl mx-auto px-4">
+              <p className="text-center text-gray-text text-sm mb-4">Trusted by leading organizations across East Africa</p>
+              <div className="flex justify-center items-center gap-8 flex-wrap">
+                {CLIENTS_LOGOS.map((logo, index) => (
+                  <div key={index} className="text-gray-text font-semibold hover:text-secondary transition-colors">
+                    {logo}
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    // ============================================
+    // SERVICES SECTION
+    // ============================================
+
+    const Services = () => {
+      const [selectedService, setSelectedService] = useState(null);
+
+      return (
+        <section id="services" className="py-20 bg-gray-light">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16 animate-slideUp">
+              <h2 className="text-4xl font-heading font-bold text-primary mb-4">
+                Comprehensive Research & Analytics Solutions
+              </h2>
+              <p className="text-xl text-gray-text max-w-3xl mx-auto">
+                Industry-leading services designed to drive academic excellence and business growth
+              </p>
+            </div>
+
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+              {SERVICES_DATA.map((service, index) => (
+                <div
+                  key={service.id}
+                  className="bg-white rounded-2xl p-8 shadow-lift hover:shadow-xl transition-all animate-fadeIn cursor-pointer"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  onClick={() => setSelectedService(service)}
+                >
+                  <div className="text-5xl mb-4">{service.icon}</div>
+                  <h3 className="text-xl font-heading font-bold text-primary mb-3">
+                    {service.title}
+                  </h3>
+                  <p className="text-gray-text mb-4">
+                    {service.shortDescription}
+                  </p>
+                  <button className="text-secondary font-semibold hover:text-primary transition-colors">
+                    Explore Service →
+                  </button>
+                </div>
+              ))}
+            </div>
+
+            {/* Service Detail Modal */}
+            {selectedService && (
+              <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setSelectedService(null)}>
+                <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8" onClick={e => e.stopPropagation()}>
+                  <div className="flex justify-between items-start mb-6">
+                    <div>
+                      <div className="text-5xl mb-4">{selectedService.icon}</div>
+                      <h2 className="text-3xl font-heading font-bold text-primary mb-2">
+                        {selectedService.title}
+                      </h2>
+                    </div>
+                    <button onClick={() => setSelectedService(null)} className="text-gray-text hover:text-primary">
+                      <XIcon />
+                    </button>
+                  </div>
+
+                  <p className="text-gray-text mb-6 text-lg">
+                    {selectedService.longDescription}
+                  </p>
+
+                  <div className="grid md:grid-cols-2 gap-6 mb-6">
+                    <div>
+                      <h3 className="font-bold text-primary mb-3">Tools We Use</h3>
+                      <div className="flex flex-wrap gap-2">
+                        {selectedService.tools.map(tool => (
+                          <span key={tool} className="px-3 py-1 bg-accent/20 text-dark rounded-full text-sm">
+                            {tool}
+                          </span>
+                        ))}
+                      </div>
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-primary mb-3">Industries Served</h3>
+                      <ul className="space-y-2">
+                        {selectedService.industries.map(industry => (
+                          <li key={industry} className="text-gray-text">• {industry}</li>
+                        ))}
+                      </ul>
+                    </div>
+                  </div>
+
+                  <Button variant="primary" href="#contact" className="w-full">
+                    Request a Quote
+                  </Button>
                 </div>
               </div>
+            )}
+          </div>
+        </section>
+      );
+    };
+
+    // ============================================
+    // WHY CHOOSE US SECTION
+    // ============================================
+
+    const WhyChooseUs = () => {
+      const benefits = [
+        {
+          icon: '🎯',
+          title: 'Expert Team',
+          description: 'PhD-qualified researchers with 8+ years of experience'
+        },
+        {
+          icon: '⚡',
+          title: 'Fast Turnaround',
+          description: 'Projects completed on time with 98% satisfaction rate'
+        },
+        {
+          icon: '🔒',
+          title: 'Confidential & Secure',
+          description: 'Your data is protected with industry-standard security'
+        }
+      ];
+
+      return (
+        <section className="py-20 bg-primary text-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-heading font-bold mb-4">Why Choose Stadi Research?</h2>
+              <p className="text-xl text-gray-100">Excellence, integrity, and results you can trust</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {benefits.map((benefit, index) => (
+                <div key={index} className="text-center animate-slideUp" style={{ animationDelay: `${index * 100}ms` }}>
+                  <div className="text-6xl mb-4">{benefit.icon}</div>
+                  <h3 className="text-2xl font-heading font-bold mb-3">{benefit.title}</h3>
+                  <p className="text-gray-100">{benefit.description}</p>
+                </div>
+              ))}
             </div>
           </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
+        </section>
+      );
+    };
 
-<!-- Training Section -->
-<section id="training" class="training section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Professional Training Programs</h2>
-    <p>Master research methods and data analysis tools with hands-on training</p>
-  </div>
+    // ============================================
+    // TESTIMONIALS SECTION
+    // ============================================
 
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-4">
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
-        <div class="training-card">
-          <div class="training-badge upcoming">Upcoming</div>
-          <div class="training-icon">
-            <i class="bi bi-file-earmark-bar-graph"></i>
-          </div>
-          <h3>Research Methods & Design</h3>
-          <p>Comprehensive introduction to research methodologies, sampling techniques, and study design for both qualitative and quantitative research.</p>
-          <ul class="training-details">
-            <li><i class="bi bi-calendar3"></i> Dec 15-19, 2025</li>
-            <li><i class="bi bi-clock"></i> 5 Days (9AM - 4PM)</li>
-            <li><i class="bi bi-geo-alt"></i> Nairobi / Online</li>
-            <li><i class="bi bi-tag"></i> KES 25,000</li>
-          </ul>
-          <a href="training.html" class="btn btn-primary w-100">Register Now</a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="training-card featured">
-          <div class="training-badge popular">Most Popular</div>
-          <div class="training-icon">
-            <i class="bi bi-graph-up-arrow"></i>
-          </div>
-          <h3>Data Analysis with R</h3>
-          <p>Learn data manipulation, visualization, and statistical analysis using R programming. Perfect for researchers and data analysts.</p>
-          <ul class="training-details">
-            <li><i class="bi bi-calendar3"></i> Jan 8-12, 2026</li>
-            <li><i class="bi bi-clock"></i> 5 Days (9AM - 4PM)</li>
-            <li><i class="bi bi-geo-alt"></i> Nairobi / Online</li>
-            <li><i class="bi bi-tag"></i> KES 30,000</li>
-          </ul>
-          <a href="training.html" class="btn btn-primary w-100">Register Now</a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-        <div class="training-card">
-          <div class="training-badge upcoming">Upcoming</div>
-          <div class="training-icon">
-            <i class="bi bi-bar-chart"></i>
-          </div>
-          <h3>SPSS for Beginners</h3>
-          <p>Master statistical analysis with SPSS, from data entry to advanced statistical procedures. Ideal for thesis and dissertation work.</p>
-          <ul class="training-details">
-            <li><i class="bi bi-calendar3"></i> Jan 22-26, 2026</li>
-            <li><i class="bi bi-clock"></i> 5 Days (9AM - 4PM)</li>
-            <li><i class="bi bi-geo-alt"></i> Nairobi / Online</li>
-            <li><i class="bi bi-tag"></i> KES 25,000</li>
-          </ul>
-          <a href="training.html" class="btn btn-primary w-100">Register Now</a>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
-      <a href="training.html" class="btn btn-outline-primary btn-lg">
-        View Full Training Calendar
-        <i class="bi bi-arrow-right ms-2"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Featured Case Studies Section -->
-<section id="case-studies" class="case-studies section light-background">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Featured Case Studies</h2>
-    <p>Real results from real clients across diverse sectors</p>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-4">
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
-        <div class="case-study-card">
-          <div class="case-study-image bg-primary rounded-3 d-flex align-items-center justify-content-center" style="height: 250px;">
-            <i class="bi bi-heart-pulse fa-5x text-white opacity-75"></i>
-          </div>
-          <div class="case-study-content">
-            <span class="case-study-tag">Healthcare</span>
-            <h3>Healthcare Access Study for Major NGO</h3>
-            <p>Comprehensive assessment of healthcare accessibility in rural Kenya involving 5,000 households across 10 counties.</p>
-            <div class="case-study-results">
-              <div class="result-item">
-                <strong>5,000+</strong>
-                <span>Respondents</span>
-              </div>
-              <div class="result-item">
-                <strong>10</strong>
-                <span>Counties</span>
-              </div>
-              <div class="result-item">
-                <strong>3 Months</strong>
-                <span>Duration</span>
-              </div>
+    const Testimonials = () => {
+      return (
+        <section id="testimonials" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-heading font-bold text-primary mb-4">What Clients Say</h2>
+              <p className="text-xl text-gray-text">Trusted by students and organizations across East Africa</p>
             </div>
-            <a href="portfolio.html" class="case-study-link">
-              Read Case Study
-              <i class="bi bi-arrow-right ms-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
 
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="case-study-card">
-          <div class="case-study-image bg-success rounded-3 d-flex align-items-center justify-content-center" style="height: 250px;">
-            <i class="bi bi-shop fa-5x text-white opacity-75"></i>
-          </div>
-          <div class="case-study-content">
-            <span class="case-study-tag">Market Research</span>
-            <h3>Market Feasibility Study for Retail Chain</h3>
-            <p>In-depth market analysis and feasibility study for a leading retail chain planning expansion into East African markets.</p>
-            <div class="case-study-results">
-              <div class="result-item">
-                <strong>3</strong>
-                <span>Countries</span>
-              </div>
-              <div class="result-item">
-                <strong>2,000+</strong>
-                <span>Surveys</span>
-              </div>
-              <div class="result-item">
-                <strong>2 Months</strong>
-                <span>Duration</span>
-              </div>
-            </div>
-            <a href="portfolio.html" class="case-study-link">
-              Read Case Study
-              <i class="bi bi-arrow-right ms-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-        <div class="case-study-card">
-          <div class="case-study-image bg-info rounded-3 d-flex align-items-center justify-content-center" style="height: 250px;">
-            <i class="bi bi-mortarboard fa-5x text-white opacity-75"></i>
-          </div>
-          <div class="case-study-content">
-            <span class="case-study-tag">Academic</span>
-            <h3>PhD Dissertation Support - Education Policy</h3>
-            <p>Comprehensive research support for doctoral candidate studying education policy implementation in secondary schools.</p>
-            <div class="case-study-results">
-              <div class="result-item">
-                <strong>50+</strong>
-                <span>Schools</span>
-              </div>
-              <div class="result-item">
-                <strong>Mixed</strong>
-                <span>Methods</span>
-              </div>
-              <div class="result-item">
-                <strong>6 Months</strong>
-                <span>Duration</span>
-              </div>
-            </div>
-            <a href="portfolio.html" class="case-study-link">
-              Read Case Study
-              <i class="bi bi-arrow-right ms-2"></i>
-            </a>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
-      <a href="portfolio.html" class="btn btn-outline-primary btn-lg">
-        View All Case Studies
-        <i class="bi bi-arrow-right ms-2"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Resources Section -->
-<section id="resources" class="resources section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Latest Resources</h2>
-    <p>Expert insights, guides, and best practices in research and data analytics</p>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-4">
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="150">
-        <div class="resource-card">
-          <div class="resource-meta">
-            <span class="resource-category">Guide</span>
-            <span class="resource-date"><i class="bi bi-calendar3"></i> Nov 15, 2025</span>
-          </div>
-          <h3>Complete Guide to Sample Size Determination</h3>
-          <p>Learn how to calculate appropriate sample sizes for different research designs and understand the factors that influence statistical power.</p>
-          <a href="resources.html" class="resource-link">
-            Read More
-            <i class="bi bi-arrow-right ms-2"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
-        <div class="resource-card">
-          <div class="resource-meta">
-            <span class="resource-category">Tutorial</span>
-            <span class="resource-date"><i class="bi bi-calendar3"></i> Nov 8, 2025</span>
-          </div>
-          <h3>Getting Started with R for Data Analysis</h3>
-          <p>A beginner-friendly introduction to R programming for data cleaning, visualization, and statistical analysis with practical examples.</p>
-          <a href="resources.html" class="resource-link">
-            Read More
-            <i class="bi bi-arrow-right ms-2"></i>
-          </a>
-        </div>
-      </div>
-
-      <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="250">
-        <div class="resource-card">
-          <div class="resource-meta">
-            <span class="resource-category">Best Practices</span>
-            <span class="resource-date"><i class="bi bi-calendar3"></i> Oct 28, 2025</span>
-          </div>
-          <h3>Ethics in Data Collection: A Practical Guide</h3>
-          <p>Essential guidelines for ensuring ethical practices in data collection, informed consent, and data protection in line with Kenya DPA 2019.</p>
-          <a href="resources.html" class="resource-link">
-            Read More
-            <i class="bi bi-arrow-right ms-2"></i>
-          </a>
-        </div>
-      </div>
-    </div>
-
-    <div class="text-center mt-5" data-aos="fade-up" data-aos-delay="300">
-      <a href="resources.html" class="btn btn-outline-primary btn-lg">
-        Browse All Resources
-        <i class="bi bi-arrow-right ms-2"></i>
-      </a>
-    </div>
-  </div>
-</section>
-
-<!-- Contact Section -->
-<section id="contact" class="contact section">
-  <div class="container section-title" data-aos="fade-up">
-    <h2>Get In Touch</h2>
-    <p>Ready to start your research project? Contact us today for a free consultation</p>
-  </div>
-
-  <div class="container" data-aos="fade-up" data-aos-delay="100">
-    <div class="row g-5">
-      <div class="col-lg-8">
-        <div class="contact-form bg-white shadow rounded-4 p-5">
-          <h3 class="mb-4">Send us a Message</h3>
-          <p class="text-muted mb-4">Fill out the form below and we'll get back to you within 24 hours.</p>
-          
-          <form>
-            <div class="row g-3 mb-4">
-              <div class="col-md-6">
-                <label for="name" class="form-label">Full Name *</label>
-                <input type="text" class="form-control" id="name" required>
-              </div>
-              <div class="col-md-6">
-                <label for="email" class="form-label">Email Address *</label>
-                <input type="email" class="form-control" id="email" required>
-              </div>
-            </div>
-            
-            <div class="mb-4">
-              <label for="service" class="form-label">Service Needed</label>
-              <select class="form-select" id="service">
-                <option value="">Select a service...</option>
-                <option value="academic-research">Academic Research Support</option>
-                <option value="corporate-research">Corporate Research</option>
-                <option value="data-analytics">Data Analytics</option>
-                <option value="training">Training & Capacity Building</option>
-                <option value="monitoring-evaluation">Monitoring & Evaluation</option>
-                <option value="market-research">Market Research</option>
-              </select>
-            </div>
-            
-            <div class="mb-4">
-              <label for="message" class="form-label">Project Details *</label>
-              <textarea class="form-control" id="message" rows="6" placeholder="Please describe your research needs, timeline, and any specific requirements..." required></textarea>
-            </div>
-            
-            <button type="submit" class="btn btn-primary btn-lg">Send Message</button>
-          </form>
-        </div>
-      </div>
-      
-      <div class="col-lg-4">
-        <div class="contact-info bg-light rounded-4 p-4">
-          <h4 class="fw-bold mb-4">Contact Information</h4>
-          
-          <div class="contact-item mb-4">
-            <div class="d-flex align-items-start">
-              <div class="contact-icon me-3">
-                <i class="bi bi-geo-alt fa-lg text-primary"></i>
-              </div>
-              <div>
-                <h6 class="fw-bold mb-1">Office Location</h6>
-                <p class="text-muted mb-0">Nairobi, Kenya</p>
-              </div>
+            <div className="grid md:grid-cols-3 gap-8">
+              {TESTIMONIALS_DATA.map((testimonial, index) => (
+                <div
+                  key={testimonial.id}
+                  className="bg-gray-light rounded-2xl p-8 shadow-lift animate-slideUp"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  <div className="text-4xl text-secondary mb-4">"</div>
+                  <p className="text-gray-text mb-6 italic">{testimonial.quote}</p>
+                  <div className="flex items-center gap-4">
+                    <img
+                      src={testimonial.avatar}
+                      alt={testimonial.author}
+                      className="w-12 h-12 rounded-full"
+                    />
+                    <div>
+                      <h4 className="font-bold text-primary">{testimonial.author}</h4>
+                      <p className="text-sm text-gray-text">{testimonial.role}</p>
+                    </div>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-          
-          <div class="contact-item mb-4">
-            <div class="d-flex align-items-start">
-              <div class="contact-icon me-3">
-                <i class="bi bi-envelope fa-lg text-primary"></i>
-              </div>
-              <div>
-                <h6 class="fw-bold mb-1">Email</h6>
-                <p class="text-muted mb-0">info@stadiresearch.com</p>
-              </div>
+        </section>
+      );
+    };
+
+    // ============================================
+    // TRAINING SECTION
+    // ============================================
+
+    const Training = () => {
+      return (
+        <section id="training" className="py-20 bg-gray-light">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-heading font-bold text-primary mb-4">Professional Training Programs</h2>
+              <p className="text-xl text-gray-text">Master research methods and data analysis tools</p>
+            </div>
+
+            <div className="grid md:grid-cols-3 gap-8">
+              {TRAINING_COURSES.map((course, index) => (
+                <div
+                  key={course.id}
+                  className={`bg-white rounded-2xl p-8 shadow-lift hover:shadow-xl transition-all animate-fadeIn ${course.popular ? 'ring-4 ring-secondary' : ''}`}
+                  style={{ animationDelay: `${index * 100}ms` }}
+                >
+                  {course.popular && (
+                    <div className="inline-block bg-secondary text-white px-4 py-1 rounded-full text-sm font-semibold mb-4">
+                      Most Popular
+                    </div>
+                  )}
+                  <h3 className="text-2xl font-heading font-bold text-primary mb-3">{course.title}</h3>
+                  <p className="text-gray-text mb-4">{course.description}</p>
+
+                  <div className="space-y-2 mb-6 text-sm">
+                    <div className="flex items-center text-gray-text">
+                      <span className="font-semibold mr-2">📅</span> {course.date}
+                    </div>
+                    <div className="flex items-center text-gray-text">
+                      <span className="font-semibold mr-2">⏱️</span> {course.duration}
+                    </div>
+                    <div className="flex items-center text-gray-text">
+                      <span className="font-semibold mr-2">💰</span> {course.price}
+                    </div>
+                  </div>
+
+                  <Button variant="primary" href="#contact" className="w-full">
+                    Register Now
+                  </Button>
+                </div>
+              ))}
             </div>
           </div>
-          
-          <div class="contact-item mb-4">
-            <div class="d-flex align-items-start">
-              <div class="contact-icon me-3">
-                <i class="bi bi-phone fa-lg text-primary"></i>
-              </div>
-              <div>
-                <h6 class="fw-bold mb-1">Phone</h6>
-                <p class="text-muted mb-0">+254 XXX XXX XXX</p>
-              </div>
+        </section>
+      );
+    };
+
+    // ============================================
+    // CASE STUDIES SECTION
+    // ============================================
+
+    const CaseStudies = () => {
+      const [selectedSector, setSelectedSector] = useState('All');
+      const [selectedCase, setSelectedCase] = useState(null);
+
+      const sectors = ['All', ...new Set(CASE_STUDIES_DATA.map(cs => cs.sector))];
+      const filteredCases = selectedSector === 'All'
+        ? CASE_STUDIES_DATA
+        : CASE_STUDIES_DATA.filter(cs => cs.sector === selectedSector);
+
+      return (
+        <section id="case-studies" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-heading font-bold text-primary mb-4">Featured Case Studies</h2>
+              <p className="text-xl text-gray-text">Real results from real clients across diverse sectors</p>
             </div>
-          </div>
-          
-          <div class="contact-item">
-            <div class="d-flex align-items-start">
-              <div class="contact-icon me-3">
-                <i class="bi bi-clock fa-lg text-primary"></i>
+
+            {/* Filter Buttons */}
+            <div className="flex justify-center gap-4 mb-12 flex-wrap">
+              {sectors.map(sector => (
+                <button
+                  key={sector}
+                  onClick={() => setSelectedSector(sector)}
+                  className={`px-6 py-2 rounded-full font-semibold transition-all ${
+                    selectedSector === sector
+                      ? 'bg-secondary text-white'
+                      : 'bg-gray-light text-gray-text hover:bg-accent'
+                  }`}
+                >
+                  {sector}
+                </button>
+              ))}
+            </div>
+
+            {/* Case Studies Grid */}
+            <div className="grid md:grid-cols-2 gap-8">
+              {filteredCases.map((caseStudy, index) => (
+                <div
+                  key={caseStudy.id}
+                  className="bg-gray-light rounded-2xl overflow-hidden shadow-lift hover:shadow-xl transition-all cursor-pointer animate-fadeIn"
+                  style={{ animationDelay: `${index * 100}ms` }}
+                  onClick={() => setSelectedCase(caseStudy)}
+                >
+                  <img src={caseStudy.image} alt={caseStudy.title} className="w-full h-48 object-cover" />
+                  <div className="p-6">
+                    <span className="inline-block px-3 py-1 bg-secondary text-white rounded-full text-sm font-semibold mb-3">
+                      {caseStudy.sector}
+                    </span>
+                    <h3 className="text-2xl font-heading font-bold text-primary mb-2">{caseStudy.title}</h3>
+                    <p className="text-gray-text mb-4">{caseStudy.challenge}</p>
+                    <div className="flex gap-4 text-sm">
+                      {Object.entries(caseStudy.metrics).map(([key, value]) => (
+                        <div key={key}>
+                          <div className="font-bold text-primary">{value}</div>
+                          <div className="text-gray-text capitalize">{key}</div>
+                        </div>
+                      ))}
+                    </div>
+                    <button className="text-secondary font-semibold hover:text-primary transition-colors mt-4">
+                      Read Full Case Study →
+                    </button>
+                  </div>
+                </div>
+              ))}
+            </div>
+
+            {/* Case Study Modal */}
+            {selectedCase && (
+              <div className="fixed inset-0 bg-black/50 z-50 flex items-center justify-center p-4" onClick={() => setSelectedCase(null)}>
+                <div className="bg-white rounded-2xl max-w-4xl w-full max-h-[90vh] overflow-y-auto p-8" onClick={e => e.stopPropagation()}>
+                  <div className="flex justify-between items-start mb-6">
+                    <div>
+                      <span className="inline-block px-3 py-1 bg-secondary text-white rounded-full text-sm font-semibold mb-3">
+                        {selectedCase.sector}
+                      </span>
+                      <h2 className="text-3xl font-heading font-bold text-primary mb-2">{selectedCase.title}</h2>
+                      <p className="text-gray-text">{selectedCase.client}</p>
+                    </div>
+                    <button onClick={() => setSelectedCase(null)} className="text-gray-text hover:text-primary">
+                      <XIcon />
+                    </button>
+                  </div>
+
+                  <img src={selectedCase.image} alt={selectedCase.title} className="w-full h-64 object-cover rounded-xl mb-6" />
+
+                  <div className="space-y-6">
+                    <div>
+                      <h3 className="text-xl font-bold text-primary mb-2">Challenge</h3>
+                      <p className="text-gray-text">{selectedCase.challenge}</p>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-primary mb-2">Approach</h3>
+                      <p className="text-gray-text">{selectedCase.approach}</p>
+                    </div>
+                    <div>
+                      <h3 className="text-xl font-bold text-primary mb-2">Results</h3>
+                      <p className="text-gray-text">{selectedCase.results}</p>
+                    </div>
+                  </div>
+
+                  <div className="flex gap-4 mt-8">
+                    {Object.entries(selectedCase.metrics).map(([key, value]) => (
+                      <div key={key} className="flex-1 text-center p-4 bg-gray-light rounded-xl">
+                        <div className="text-2xl font-bold text-primary">{value}</div>
+                        <div className="text-gray-text capitalize">{key}</div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
               </div>
-              <div>
-                <h6 class="fw-bold mb-1">Business Hours</h6>
-                <p class="text-muted mb-0">
-                  Monday - Friday: 8:00 AM - 6:00 PM<br>
-                  Saturday: 9:00 AM - 2:00 PM<br>
-                  Sunday: Closed
+            )}
+          </div>
+        </section>
+      );
+    };
+
+    // ============================================
+    // ABOUT SECTION
+    // ============================================
+
+    const About = () => {
+      return (
+        <section id="about" className="py-20 bg-gray-light">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-2 gap-12 items-center">
+              <div className="animate-slideUp">
+                <h2 className="text-4xl font-heading font-bold text-primary mb-6">
+                  East Africa's Leading Research & Analytics Consultancy
+                </h2>
+                <p className="text-gray-text mb-6 text-lg">
+                  Stadi Research & Analytics Ltd is a premier research consultancy headquartered in Nairobi, Kenya, delivering world-class research, data analytics, and capacity building solutions.
                 </p>
+                <p className="text-gray-text mb-8">
+                  With over 8 years of proven excellence, we serve a dual mission: empowering students and academic institutions with rigorous research methodologies, while providing businesses, NGOs, and government agencies with strategic intelligence that drives evidence-based decision-making.
+                </p>
+
+                <div className="grid grid-cols-3 gap-6 mb-8">
+                  {[
+                    { number: '500+', label: 'Projects' },
+                    { number: '98%', label: 'Satisfaction' },
+                    { number: '50+', label: 'Organizations' }
+                  ].map((stat, index) => (
+                    <div key={index} className="text-center">
+                      <div className="text-3xl font-bold text-secondary">{stat.number}</div>
+                      <div className="text-gray-text">{stat.label}</div>
+                    </div>
+                  ))}
+                </div>
+
+                <Button variant="primary" href="#services">
+                  Explore Our Services →
+                </Button>
+              </div>
+
+              <div className="relative animate-fadeIn">
+                <img
+                  src="https://picsum.photos/seed/about/600/400"
+                  alt="About Stadi Research"
+                  className="rounded-2xl shadow-lift w-full"
+                />
+                <div className="absolute -bottom-6 -left-6 bg-white p-6 rounded-xl shadow-lift">
+                  <div className="text-4xl mb-2">🏆</div>
+                  <div className="font-bold text-primary">Excellence</div>
+                  <div className="text-sm text-gray-text">Since 2016</div>
+                </div>
               </div>
             </div>
           </div>
+        </section>
+      );
+    };
+
+    // ============================================
+    // CONTACT SECTION
+    // ============================================
+
+    const Contact = () => {
+      const [openFaq, setOpenFaq] = useState(null);
+      const [formData, setFormData] = useState({
+        name: '',
+        email: '',
+        service: '',
+        message: ''
+      });
+
+      const handleSubmit = (e) => {
+        e.preventDefault();
+        alert('Thank you! We will get back to you within 24 hours.');
+        setFormData({ name: '', email: '', service: '', message: '' });
+      };
+
+      return (
+        <section id="contact" className="py-20 bg-white">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="text-center mb-16">
+              <h2 className="text-4xl font-heading font-bold text-primary mb-4">Get In Touch</h2>
+              <p className="text-xl text-gray-text">Ready to start your research project? Contact us today</p>
+            </div>
+
+            <div className="grid md:grid-cols-2 gap-12">
+              {/* Contact Form */}
+              <div className="bg-gray-light rounded-2xl p-8 shadow-lift">
+                <h3 className="text-2xl font-heading font-bold text-primary mb-6">Send us a Message</h3>
+                <form onSubmit={handleSubmit} className="space-y-6">
+                  <div>
+                    <label className="block text-gray-text font-semibold mb-2">Full Name *</label>
+                    <input
+                      type="text"
+                      required
+                      value={formData.name}
+                      onChange={(e) => setFormData({...formData, name: e.target.value})}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-text font-semibold mb-2">Email Address *</label>
+                    <input
+                      type="email"
+                      required
+                      value={formData.email}
+                      onChange={(e) => setFormData({...formData, email: e.target.value})}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                    />
+                  </div>
+                  <div>
+                    <label className="block text-gray-text font-semibold mb-2">Service of Interest</label>
+                    <select
+                      value={formData.service}
+                      onChange={(e) => setFormData({...formData, service: e.target.value})}
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                    >
+                      <option value="">Select a service...</option>
+                      {SERVICES_DATA.map(service => (
+                        <option key={service.id} value={service.id}>{service.title}</option>
+                      ))}
+                    </select>
+                  </div>
+                  <div>
+                    <label className="block text-gray-text font-semibold mb-2">Project Details *</label>
+                    <textarea
+                      required
+                      rows={6}
+                      value={formData.message}
+                      onChange={(e) => setFormData({...formData, message: e.target.value})}
+                      placeholder="Tell us about your research needs, timeline, and requirements..."
+                      className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-secondary focus:ring-2 focus:ring-secondary/20 outline-none transition-all"
+                    />
+                  </div>
+                  <Button variant="primary" className="w-full">
+                    Send Message
+                  </Button>
+                </form>
+              </div>
+
+              {/* Contact Info & FAQ */}
+              <div>
+                <div className="bg-gray-light rounded-2xl p-8 shadow-lift mb-8">
+                  <h3 className="text-2xl font-heading font-bold text-primary mb-6">Contact Information</h3>
+                  <div className="space-y-6">
+                    <div className="flex items-start gap-4">
+                      <div className="text-2xl">📍</div>
+                      <div>
+                        <div className="font-semibold text-primary">Office Location</div>
+                        <div className="text-gray-text">Nairobi, Kenya</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="text-2xl">📧</div>
+                      <div>
+                        <div className="font-semibold text-primary">Email</div>
+                        <div className="text-gray-text">info@stadiresearch.com</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="text-2xl">📞</div>
+                      <div>
+                        <div className="font-semibold text-primary">Phone</div>
+                        <div className="text-gray-text">+254 XXX XXX XXX</div>
+                      </div>
+                    </div>
+                    <div className="flex items-start gap-4">
+                      <div className="text-2xl">⏰</div>
+                      <div>
+                        <div className="font-semibold text-primary">Business Hours</div>
+                        <div className="text-gray-text text-sm">
+                          Monday - Friday: 8:00 AM - 6:00 PM<br />
+                          Saturday: 9:00 AM - 2:00 PM<br />
+                          Sunday: Closed
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  <a
+                    href="https://wa.me/254XXXXXXXXX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex items-center justify-center gap-2 bg-green-500 text-white px-6 py-3 rounded-full font-semibold hover:bg-green-600 transition-colors mt-6"
+                  >
+                    <WhatsAppIcon />
+                    WhatsApp Us
+                  </a>
+                </div>
+
+                {/* FAQ Accordion */}
+                <div className="space-y-4">
+                  <h3 className="text-2xl font-heading font-bold text-primary mb-4">Frequently Asked Questions</h3>
+                  {FAQ_DATA.map(faq => (
+                    <div key={faq.id} className="bg-gray-light rounded-xl overflow-hidden">
+                      <button
+                        onClick={() => setOpenFaq(openFaq === faq.id ? null : faq.id)}
+                        className="w-full flex items-center justify-between p-4 text-left hover:bg-accent/20 transition-colors"
+                      >
+                        <span className="font-semibold text-primary">{faq.question}</span>
+                        <ChevronDownIcon />
+                      </button>
+                      {openFaq === faq.id && (
+                        <div className="p-4 pt-0 text-gray-text">
+                          {faq.answer}
+                        </div>
+                      )}
+                    </div>
+                  ))}
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      );
+    };
+
+    // ============================================
+    // FOOTER COMPONENT
+    // ============================================
+
+    const Footer = () => {
+      return (
+        <footer className="bg-primary text-white py-16">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="grid md:grid-cols-4 gap-12 mb-12">
+              {/* Company Info */}
+              <div>
+                <div className="text-2xl font-heading font-bold mb-4">
+                  Stadi<span className="text-accent">.</span>
+                </div>
+                <p className="text-gray-300 mb-4">
+                  East Africa's premier research and analytics consultancy delivering excellence since 2016.
+                </p>
+                <div className="flex gap-4">
+                  <a href="#" className="text-gray-300 hover:text-accent transition-colors">LinkedIn</a>
+                  <a href="#" className="text-gray-300 hover:text-accent transition-colors">Twitter</a>
+                </div>
+              </div>
+
+              {/* Explore */}
+              <div>
+                <h3 className="font-heading font-bold mb-4">Explore</h3>
+                <ul className="space-y-2">
+                  {NAV_LINKS.map(link => (
+                    <li key={link.name}>
+                      <a href={link.path} className="text-gray-300 hover:text-accent transition-colors">
+                        {link.name}
+                      </a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* Get in Touch */}
+              <div>
+                <h3 className="font-heading font-bold mb-4">Get in Touch</h3>
+                <div className="space-y-2 text-gray-300">
+                  <div>Nairobi, Kenya</div>
+                  <div>info@stadiresearch.com</div>
+                  <div>+254 XXX XXX XXX</div>
+                  <a
+                    href="https://wa.me/254XXXXXXXXX"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center gap-2 text-green-400 hover:text-green-300 mt-4"
+                  >
+                    <WhatsAppIcon />
+                    WhatsApp Us
+                  </a>
+                </div>
+              </div>
+
+              {/* Newsletter */}
+              <div>
+                <h3 className="font-heading font-bold mb-4">Newsletter</h3>
+                <p className="text-gray-300 mb-4 text-sm">
+                  Subscribe for research insights and updates
+                </p>
+                <form className="flex gap-2">
+                  <input
+                    type="email"
+                    placeholder="Your email"
+                    className="flex-1 px-4 py-2 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent"
+                  />
+                  <button type="submit" className="bg-accent text-primary px-4 py-2 rounded-lg font-semibold hover:bg-opacity-90 transition-colors">
+                    Sign Up
+                  </button>
+                </form>
+              </div>
+            </div>
+
+            {/* Bottom Bar */}
+            <div className="border-t border-white/20 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="text-gray-300 text-sm">
+                © 2024 Stadi Research & Analytics Ltd. All rights reserved.
+              </div>
+              <div className="flex gap-6 text-sm">
+                <a href="#" className="text-gray-300 hover:text-accent transition-colors">Privacy Policy</a>
+                <a href="#" className="text-gray-300 hover:text-accent transition-colors">Terms of Use</a>
+              </div>
+            </div>
+          </div>
+        </footer>
+      );
+    };
+
+    // ============================================
+    // MAIN APP COMPONENT
+    // ============================================
+
+    const App = () => {
+      return (
+        <div className="min-h-screen">
+          <Header />
+          <Hero />
+          <About />
+          <Services />
+          <WhyChooseUs />
+          <Testimonials />
+          <Training />
+          <CaseStudies />
+          <Contact />
+          <Footer />
         </div>
-      </div>
-    </div>
-  </div>
-</section>
+      );
+    };
+
+    // ============================================
+    // RENDER APP
+    // ============================================
+
+    const root = ReactDOM.createRoot(document.getElementById('root'));
+    root.render(<App />);
+  </script>
+</body>
+</html>
